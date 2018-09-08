@@ -1,0 +1,51 @@
+RMS-INF : Input parameters P_START_DATE :12/31/2013  P_END_DATE :09/30/2015  
+1.0 Truncate dwdm1.maintnc_mnged_entmt_ord table at 2016-12-18-15.00.37.048036
+1.1 Started Inserting data from sods2.mnged_entmt_ord meo table at 2016-12-18-15.00.37.623707
+RMS-INF : Inserted 2288872    rows into dwdm1.maintnc_mnged_entmt_ord table
+1.2 Started Inserting data from sods2.mnged_entmt_ord_hw meo table at 2016-12-18-15.02.44.273227
+RMS-INF : Inserted 136643     rows into dwdm1.maintnc_mnged_entmt_ord table
+1.3 Started update bp_trnsfr_of_ownrshp_flag from table DWDM1.MAINTNC_MNGED_ENTMT_ORD at 2016-12-18-15.06.44.304625
+RMS-INF : updated bp_trnsfr_of_ownrshp_flag column for rows: 0          in dwdm1.maintnc_mnged_entmt_ord table
+1.4 Started update prior_acq_data_flg from table DWDM1.MAINTNC_MNGED_ENTMT_ORD at 2016-12-18-15.06.49.240368
+RMS-INF : updated PRIOR_ACQ_DATA_FLG column for rows: 0          in dwdm1.maintnc_mnged_entmt_ord table
+3.0 Execute Stored Procedure dwdm1.dp_update_maint_meo at 2016-12-18-15.06.49.267590
+RMS-INF:   Start dp_updt_maint_meo              at 2016-12-18-15.06.49.298147
+RMS-INF : Stored Procedure dwdm1.dp_update_maint_meo completed successfully with status code : 0          at 2016-12-18-15.11.34.279598
+RMS-INF : updated ACQ_DATA_FLG 7700       in dwdm1.maintnc_mnged_entmt_ord table
+4.0 Begin : Truncate table dwdm1.maintnc_renwl_fact_trgt_work table at 2016-12-18-15.53.14.986403
+5.0 Begin : Insert into dwdm1.maintnc_renal_fact_trgt_work table from fncd1.revn_and_cost_dtl revn table at 2016-12-18-15.53.15.226262
+RMS-INF : Inserted 8366454    rows into DWDM1.MAINTNC_RENWL_FACT_TRGT_WORK completed successfully with status code : 0          at 2016-12-18-17.10.24.166589
+RMS-INF : Inserted 0          rows into USER_TEMP_01.MIN_BILLG_DT completed successfully with status code : 0          at 2016-12-18-17.15.50.160086
+RMS-INF : Inserted 53692      rows into DWDM1.MAINTNC_RENWL_FACT_TRGT_WORK completed successfully with status code : 0          at 2016-12-18-19.22.59.990077
+6.0 Begin : Insert into dwdm1.maintnc_renal_fact_trgt_work table from dwdm1.maintnc_renwl_fact_trgt_arch table at 2016-12-18-19.23.00.058845
+RMS-INF : Inserted 0          rows into DWDM1.MAINTNC_RENWL_FACT_TRGT_WORK completed successfully with status code : 0          at 2016-12-18-19.25.05.771116
+7.0 Begin : Execute Stored Procedure dp_updt_maint_meo_rsel at 2016-12-18-19.25.11.426982
+RMS-INF: Start maint_meo_rsel2016-12-18-19.25.11.449376
+RMS-INF : Stored Procedure dwdm1.dp_updt_maint_meo_rsel completed successfully with status code : 0          at 2016-12-18-20.20.17.241447
+8.0 Begin : Execute Stored Procedure dp_updt_maint_meo_bef3 at 2016-12-18-20.20.17.244428
+RMS-INF: Start maint_renwl_rpt_cleanup 2016-12-18-20.20.17.270008
+RMS-INF : Updated 2425515    rows in DWDM1.MAINTNC_MNGED_ENTMT_ORD in DP_UPDT_MAINT_MEO_BEF3 successfully  at 2016-12-19-01.17.45.832532
+RMS-INF : Stored Procedure dwdm1.dp_updt_maint_meo_bef3 completed successfully with status code : 0          at 2016-12-19-01.17.45.857328
+8.1 Begin : Execute Stored Procedure dp_updt_maintnc_meo_prior_acq.sp at 2016-12-19-01.17.45.865896
+RMS-INF: Start maint_renwl_rpt_cleanup 2016-12-19-01.17.45.887718
+RMS-INF : Stored Procedure dwdm1.dp_updt_maintnc_meo_prior_acq.sp completed successfully with status code : 0          at 2016-12-19-01.17.45.955642
+8.2 Begin : Execute Stored Procedure dp_updt_maintnc_meo_acq.sp at 2016-12-19-01.17.45.961674
+RMS-INF: Start maint_renwl_rpt_cleanup 2016-12-19-01.17.46.003589
+RMS-INF: Update DWDM1.MAINTNC_MNGED_ENTMT_ORD started 2016-12-19-01.17.46.023944
+RMS-INF : Stored Procedure dwdm1.dp_updt_maintnc_meo_acq.sp completed successfully with status code : 0          at 2016-12-19-01.20.20.735258
+8.3 Begin : Execute Stored Procedure dwdm1.dp_updt_maint_meo_usd_amt at 2016-12-19-01.20.20.738559
+RMS-INF: Start of usd_plan_gl_posted_amt update2016-12-19-01.20.20.788602
+2016-12-19-01.22.01.847098 Update complete for  DWDM1.MAINTNC_MNGED_ENTMT_ORD .
+RMS-INF : Stored Procedure dwdm1.dp_updt_maint_meo_usd_amt completed successfully with status code : 0          at 2016-12-19-01.22.01.866395
+9.0 Begin : Truncate table dwdm2.maint_renwl_fact_2 at 2016-12-19-01.22.01.874313
+10.0 Begin : Insert into dwdm2.maint_renwl_fact_2 table from dwdm1.maintnc_mnged_entmt_ord at 2016-12-19-01.22.02.428834
+RMS-INF : Inserted 0          rows into DWDM2.MAINT_RENWL_FACT_2 completed successfully with status code : 0          at 2016-12-19-01.30.34.980744
+Inserted 0          rows into dwdm2.maint_renwl_fact_2 at 2016-12-19-01.30.35.021014
+11.0 Begin : Delete prior records from dwdm1.maintnc_renwl_fact_trgt at 2016-12-19-01.30.35.023652
+Deleted 2247458    rows in DWDM1.MAINTNC_RENWL_FACT_TRGT at 2016-12-19-01.36.13.871508
+12.0 Begin : Insert into dwdm1.maintnc_renwl_fact_trgt_ from sods2.mnged_entmt at 2016-12-19-01.36.13.885590
+RMS-INF : Inserted 0          rows into DWDM1.MAINTNC_RENWL_FACT_TRGT completed successfully with status code : 0          at 2016-12-19-04.27.48.609281
+RMS-INF : Deleted 86         rows from DWDM1.MAINTNC_RENWL_FACT_TRGT successfully for records existing in both MEO and MEO_HW with status code : 0          at 2016-12-19-04.29.40.439487
+RMS-INF : Updated 86         rows in DWDM1.MAINTNC_RENWL_FACT_TRGT successfully for records existing in both MEO and MEO_HW with status code : 0          at 2016-12-19-04.31.47.564791
+RMS-INF : Updated 117363     rows in DWDM1.MAINTNC_RENWL_FACT_TRGT successfully with status code : 0          at 2016-12-19-04.33.01.282524
+RMS-SUCCESS: dp_insrt_maint_renwl_fact_trgt           completed successfully at 2016-12-19-04.33.01.286591

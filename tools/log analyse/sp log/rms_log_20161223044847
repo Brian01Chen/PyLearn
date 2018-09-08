@@ -1,0 +1,3 @@
+RMS-INF : Input parameters P_START_DATE :12/31/2013  P_END_DATE :09/30/2015  
+1.0 Truncate dwdm1.maintnc_mnged_entmt_ord table at 2016-12-23-04.48.59.267158
+USER_COLL           : Exit Handler Detected Fatal Error: sql_code: -1477 :sql_state: 55019:at section: Truncate DWDM1.MAINTNC_MNGED_ENTMT_ORD table

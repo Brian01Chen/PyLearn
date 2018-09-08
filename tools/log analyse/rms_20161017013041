@@ -1,0 +1,33 @@
+1.1 Started dp_insrt_maintrenwlactlfact    at 2016-10-17-01.58.00.790255
+1.2 Inserting data into DWDM1.MAINTNC_RENWL_FACT_ACTL table dp_insrt_maintrenwlactlfact    at 2016-10-17-01.58.00.799507
+1.3.0 Inserted : 0 rows at 2016-10-17-02.58.56.095708
+ into dwdm1.maintnc_renewal_fact_actl for Exclude the Periodic Billing orders
+1.3.1 Inserted : 0 Periodic Billing rows at 2016-10-17-03.05.25.639688
+ into user_temp_01.min_billg_dt for include Periodic Billing orders 
+1.3.2 Inserted : 0 Periodic Billing rows at 2016-10-17-03.19.15.945829
+ into dwdm1.maintnc_renwl_trgt_actl_fact for included Periodic Billing orders
+1.4 Started Inserting archive data into dwdm1.maint_renwl_fact_actl table at 2016-10-17-03.19.47.973571
+RMS-Info : Inserted 0 rows from DWDM1.MAINTNC_RENWL_FACT_ACTL_ARCH table at 2016-10-17-03.20.51.560116
+1.5 Started Inserting acquisition data into dwdm1.maint_renwl_fact_actl table at 2016-10-17-03.20.51.576953
+1.1 Started DP_INSRT_MAINTRENWLACTLFACT_ACQ          at 2016-10-17-03.20.51.653699
+1.2.1 Started Inserting CTI data from SODS2.MNGED_ENTMT_ORD into dwdm1.maint_renwl_fact_actl table at 2016-10-17-03.20.51.707529
+RMS-Info : Inserted 0 rows from CTI table at 2016-10-17-03.21.26.305078
+1.2.2 Started Inserting CTI data from SODS2.MNGED_ENTMT_ORD_HW into dwdm1.maint_renwl_fact_actl table at 2016-10-17-03.21.26.309651
+RMS-Info : Inserted 0 rows from CTI table at 2016-10-17-03.21.26.341343
+1.3.1 Started Inserting other acquisition data from SODS2.MNGED_ENTMT_ORD into dwdm1.maint_renwl_fact_actl table at 2016-10-17-03.21.26.353990
+RMS-Info : Inserted 1108 rows from other acquisition  table at 2016-10-17-03.23.35.059513
+1.3.2 Started Inserting other acquisition data into dwdm1.maint_renwl_fact_actl table at 2016-10-17-03.23.35.064740
+RMS-Info : Inserted 308 rows from other acquisition  table at 2016-10-17-03.25.31.478636
+RMS-INF : DP_INSRT_MAINTRENWLACTLFACT_ACQ          inserted 1416       into dwdm1.maintnc_renwl_fact_actl table at 2016-10-17-03.25.31.485500
+1.6 Successfully completed loading the Maintenance Renewal Actual Fact table at 2016-10-17-03.25.31.494833
+1.6 Calling the Stored Procedure dp_updt_maint_renwl_actl at 2016-10-17-03.25.31.511140
+  ODS-INF:   Start dp_update_maint_renwl_actl 2016-10-17-03.25.31.581248
+5.0 dp_updt_maint_renwl_actl       updated 70860 rows in DWDM1.MAINTNC_RENWL_FACT_ACTL table at 2016-10-17-03.27.46.061652
+dp_updt_maint_renwl_actl       completed successfully at 2016-10-17-03.27.46.068076
+1.7 Calling the Stored Procedure dp_updt_maint_renwl_actl_2 at 2016-10-17-03.27.46.080183
+  ODS-INF:   Start dp_update_maint_renwl_actl_2 2016-10-17-03.27.46.154998
+5.0 dp_updt_maint_renwl_actl_2     updated 236605 rows in DWDM1.MAINTNC_RENWL_FACT_ACTL table at 2016-10-17-03.34.16.124995
+9.0 dp_updt_maint_renwl_actl_2     updated 0 rows in DWDM1.MAINTNC_RENWL_FACT_ACTL table at 2016-10-17-03.34.23.256060
+dp_updt_maint_renwl_actl_2     completed successfully at 2016-10-17-03.34.23.272215
+RMS-INF : dp_insrt_maintrenwlactlfact    inserted 0          into dwdm1.maintnc_renwl_fact_actl table at 2016-10-17-03.34.23.293329
+1.7 Successfully completed loading the Maintenance Renewal Actual Fact table at 2016-10-17-03.34.23.302453

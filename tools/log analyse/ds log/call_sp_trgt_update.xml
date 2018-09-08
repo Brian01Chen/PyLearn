@@ -1,0 +1,1060 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DSExport>
+   <Header CharacterSet="CP1252" Date="2016-12-13" ExportingTool="IBM InfoSphere DataStage Export" ServerName="ELIMINATOR.AUSTIN.IBM.COM" ServerVersion="8.7" Time="20.19.56" ToolInstanceID="dswdw_uat" ToolVersion="8" />
+   <Job DateModified="2012-11-29" Identifier="Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt" TimeModified="04.27.10">
+      <Record Identifier="ROOT" Readonly="0" Type="JobDefn">
+         <Property Name="Name">Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt</Property>
+         <Property Name="NextID">3</Property>
+         <Property Name="Container">V0</Property>
+         <Property Name="JobVersion">56.0.0</Property>
+         <Property Name="ControlAfterSubr">0</Property>
+         <Collection Name="Parameters" Type="Parameters">
+            <SubRecord>
+               <Property Name="Name">$DSS_DB_NAME</Property>
+               <Property Name="Prompt">Enter the DSS Database Name</Property>
+               <Property Name="Default">$PROJDEF</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">$DSS_DB_USERNAME</Property>
+               <Property Name="Prompt">Enter the DSS Database User Name</Property>
+               <Property Name="Default">$PROJDEF</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">$DSS_DB_PASSWD</Property>
+               <Property Name="Prompt">Enter the DSS Database Password</Property>
+               <Property Name="Default">HDI@IJV8O9JN064IL:JD1K95</Property>
+               <Property Name="ParamType">1</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">P_LOG_NAME</Property>
+               <Property Name="Prompt">P_LOG_NAME</Property>
+               <Property Name="Default">rms_log</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">P_END_DATE</Property>
+               <Property Name="Prompt">P_END_DATE</Property>
+               <Property Name="Default">DEFAULT</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">P_START_DATE</Property>
+               <Property Name="Prompt">P_START_DATE</Property>
+               <Property Name="Default">DEFAULT</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">AdvancedRuntimeOptions</Property>
+               <Property Name="Value">#DSProjectARTOptions#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TraceMode</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TraceSeq</Property>
+               <Property Name="Value">1</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TraceRecords</Property>
+               <Property Name="Value">100</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TraceSkip</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TracePeriod</Property>
+               <Property Name="Value">1</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">RecordJobPerformanceData</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">IdentList</Property>
+               <Property Name="Value">DWDM1_Maintnc_Renwl_Fact_Trgt|prepare_parameter|Transformer|Abort_Job</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">ClientCodePage</Property>
+               <Property Name="Value">1252</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">EncOrpheusParam</Property>
+               <Property Name="Name">$DSS_DB_NAME</Property>
+               <Property Name="Value">DSCAPIOP_$DSS_DB_NAME</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">EncOrpheusParam</Property>
+               <Property Name="Name">$DSS_DB_USERNAME</Property>
+               <Property Name="Value">DSCAPIOP_$DSS_DB_USERNAME</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">EncOrpheusParam</Property>
+               <Property Name="Name">$DSS_DB_PASSWD</Property>
+               <Property Name="Value">DSCAPIOP_$DSS_DB_PASSWD</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">EncOrpheusParam</Property>
+               <Property Name="Name">P_LOG_NAME</Property>
+               <Property Name="Value">DSCAPIOP_P_LOG_NAME</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">EncOrpheusParam</Property>
+               <Property Name="Name">P_END_DATE</Property>
+               <Property Name="Value">DSCAPIOP_P_END_DATE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">EncOrpheusParam</Property>
+               <Property Name="Name">P_START_DATE</Property>
+               <Property Name="Value">DSCAPIOP_P_START_DATE</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NULLIndicatorPosition">0</Property>
+         <Property Name="OrchestrateCode" PreFormatted="1">#################################################################
+#### STAGE: DWDM1_Maintnc_Renwl_Fact_Trgt
+## Operator
+dscapiop
+## Operator options
+-charset [&amp;DSProjectMapName]
+-stageprops Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt.DWDM1_Maintnc_Renwl_Fact_Trgt '{
+   DBVENDOR=\'DB2\', 
+   DATASRC=\'[&amp;"DSCAPIOP_$DSS_DB_NAME"]\', 
+   USERID=\'[&amp;"DSCAPIOP_$DSS_DB_USERNAME"]\', 
+   PASSWORD=\'[&amp;"DSCAPIOP_$DSS_DB_PASSWD"]\', 
+   STDPROC=\'DWDM1\.DP_INSRT_MAINT_RENWL_FACT_TRGT\', 
+   GENSTD=\'Yes\', 
+   TYPEPROC=\'Transform\', 
+   PROCSTMT=\'CALL DWDM1\.DP_INSRT_MAINT_RENWL_FACT_TRGT(\?\, \?\, \?\, \?)\;\', 
+   SPPARAM=\'P_LOG_NAME\-\+\-P_LOG_NAME\-\+\-\?\-\+\-I\+\-\+P_END_DATE\-\+\-P_END_DATE\-\+\-\?\-\+\-I\+\-\+P_START_DATE\-\+\-P_START_DATE\-\+\-\?\-\+\-I\+\-\+P_STATUS\-\+\-P_STATUS\-\+\-\?\-\+\-O\', 
+   TX_ISO_LEVEL=\'None\', 
+   TRANSMODE=\'ANSI\', 
+   CLIENTCHARSET=\'Default\', 
+   DBPROCTYPE=\'Stored procedure\'
+}'
+-inlinkprops 0 insert '{
+   FRDATA=\'No\', 
+   TRANSSIZE=0, 
+   FEROW=\'Yes\', 
+      DSTxnSize=0, 
+      DSSQLType={P_LOG_NAME=12, P_END_DATE=1, P_START_DATE=1, P_STATUS=4}, 
+      DSSQLPrecision={P_LOG_NAME=128, P_END_DATE=10, P_START_DATE=10}, 
+      DSSchema=\'record
+         (
+           P_LOG_NAME\:ustring\[max\=128\]\;
+           P_END_DATE\:ustring\[10\]\;
+           P_START_DATE\:ustring\[10\]\;
+           P_STATUS\:int32\;
+         )\'
+}'
+-outlinkprops 0 status_9 '{
+   STLINK=\'No\', 
+   MROWS=\'No\', 
+   ACTIVITYCOUNT=\'No\', 
+      DSDisplayWidth={P_STATUS=10}, 
+      DSSQLType={P_STATUS=4}, 
+      DSSQLPrecision={P_STATUS=10}, 
+      DSSchema=\'record
+         (
+           P_STATUS\:int32\;
+         )\'
+}'
+-rtlib 'dsstp.so'
+-reslib 'dsstpenu.so'
+
+## General options
+[ident('DWDM1_Maintnc_Renwl_Fact_Trgt'); jobmon_ident('DWDM1_Maintnc_Renwl_Fact_Trgt')]
+## Inputs
+0&lt; [] 'prepare_parameter:insert.v'
+## Outputs
+0&gt; [] 'DWDM1_Maintnc_Renwl_Fact_Trgt:status_9.v'
+;
+
+#################################################################
+#### STAGE: prepare_parameter
+## Operator
+dscapiop
+## Operator options
+-charset [&amp;DSProjectMapName]
+-stageprops Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt.prepare_parameter '{
+   SERVER=\'[&amp;"DSCAPIOP_$DSS_DB_NAME"]\', 
+   USERNAME=\'[&amp;"DSCAPIOP_$DSS_DB_USERNAME"]\', 
+   PASSWORD=\'[&amp;"DSCAPIOP_$DSS_DB_PASSWD"]\', 
+   ISOLATION=\'Cursor Stability\'
+}'
+-outlinkprops 0 insert '{
+   SOURCETABLES=\'ods_dbo4\.trgt_tmp\', 
+   PREFETCH=50, 
+   OTHER_CLAUSES=\'with ur\', 
+   USERSQL=\'SELECT 
+    \\\'[&amp;"DSCAPIOP_P_LOG_NAME"]\\\' AS P_LOG_NAME\, 
+    CASE WHEN \\\'[&amp;"DSCAPIOP_P_END_DATE"]\\\' \= \\\'DEFAULT\\\' THEN CAST(YEAR(CURRENT DATE)\-1 AS CHAR(4)) \|\| \\\'\-09\-30\\\' ELSE \\\'[&amp;"DSCAPIOP_P_END_DATE"]\\\' END   AS P_END_DATE\,
+    CASE WHEN \\\'[&amp;"DSCAPIOP_P_START_DATE"]\\\' \= \\\'DEFAULT\\\' THEN \\\'2007\-12\-31\\\' ELSE \\\'[&amp;"DSCAPIOP_P_START_DATE"]\\\' END AS P_START_DATE\,
+    0 AS P_STATUS
+FROM  SYSIBM\.SYSDUMMY1 WITH UR\;\', 
+   CONTBEFORESQL=\'YES\', 
+   CONTAFTERSQL=\'YES\', 
+   GENSQL=\'No\', 
+      DSSQLType={P_LOG_NAME=12, P_END_DATE=1, P_START_DATE=1, P_STATUS=4}, 
+      DSSQLPrecision={P_LOG_NAME=128, P_END_DATE=10, P_START_DATE=10}, 
+      DSSchema=\'record
+         (
+           P_LOG_NAME\:ustring\[max\=128\]\;
+           P_END_DATE\:ustring\[10\]\;
+           P_START_DATE\:ustring\[10\]\;
+           P_STATUS\:int32\;
+         )\'
+}'
+-rtlib 'dsdb2.so'
+-reslib 'dsdb2enu.so'
+
+## General options
+[ident('prepare_parameter'); jobmon_ident('prepare_parameter')]
+## Outputs
+0&gt; [] 'prepare_parameter:insert.v'
+;
+
+#################################################################
+#### STAGE: Transformer
+## Operator
+transform
+## Operator options
+-flag run
+-name 'V0S7_Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt_Transformer'
+-oldnullhandling
+
+## General options
+[ident('Transformer'); jobmon_ident('Transformer')]
+## Inputs
+0&lt; [] 'DWDM1_Maintnc_Renwl_Fact_Trgt:status_9.v'
+## Outputs
+0&gt; [] 'Transformer:abort.v'
+;
+
+#################################################################
+#### STAGE: Abort_Job
+## Operator
+dscapiop
+## Operator options
+-charset [&amp;DSProjectMapName]
+-stageprops Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt.Abort_Job '{
+   SERVER=\'[&amp;"DSCAPIOP_$DSS_DB_NAME"]\', 
+   USERNAME=\'[&amp;"DSCAPIOP_$DSS_DB_USERNAME"]\', 
+   PASSWORD=\'[&amp;"DSCAPIOP_$DSS_DB_PASSWD"]\', 
+   ISOLATION=\'Cursor Stability\'
+}'
+-inlinkprops 0 abort '{
+   TARGETTABLE=\'sns\.dummytable\', 
+   TRANSSIZE=100, 
+   PARRARYSIZE=50, 
+   INPUTMODE=\'insert\', 
+   CREATETABLE=\'No\', 
+   GENCREATEDDL=\'Yes\', 
+   CREATEDDL=\'CREATE TABLE sns\.dummytable (
+dummy_columns BIGINT NOT NULL
+ )
+\', 
+   DROPTABLE=\'No\', 
+   GENDROPDDL=\'Yes\', 
+   DROPDDL=\'DROP TABLE sns\.dummytable\', 
+   USERSQL=\'INSERT INTO sns\.dummytable (dummy_columns) VALUES (\?)\;\', 
+   CONTBEFORESQL=\'YES\', 
+   CONTAFTERSQL=\'YES\', 
+   GENSQL=\'Yes\', 
+      DSTxnSize=0, 
+      DSSQLType={dummy_columns=-5}, 
+      DSSchema=\'record
+         (
+           dummy_columns\:int64\;
+         )\'
+}'
+-rtlib 'dsdb2.so'
+-reslib 'dsdb2enu.so'
+
+## General options
+[ident('Abort_Job'); jobmon_ident('Abort_Job')]
+## Inputs
+0&lt; [] 'Transformer:abort.v'
+;
+
+</Property>
+         <Property Name="IsTemplate">0</Property>
+         <Property Name="NLSLocale">,,,,</Property>
+         <Property Name="JobType">3</Property>
+         <Property Name="Category">\Jobs\SNS\Fact\RMS</Property>
+         <Property Name="CenturyBreakYear">30</Property>
+         <Property Name="NextAliasID">2</Property>
+         <Property Name="ParameterFileDDName">DD00001</Property>
+         <Property Name="ReservedWordCheck">1</Property>
+         <Property Name="TransactionSize">0</Property>
+         <Property Name="ValidationStatus">0</Property>
+         <Property Name="Uploadable">0</Property>
+         <Property Name="PgmCustomizationFlag">0</Property>
+         <Property Name="JobReportFlag">0</Property>
+         <Property Name="AllowMultipleInvocations">0</Property>
+         <Property Name="Act2ActOverideDefaults">0</Property>
+         <Property Name="Act2ActEnableRowBuffer">0</Property>
+         <Property Name="Act2ActUseIPC">0</Property>
+         <Property Name="Act2ActBufferSize">0</Property>
+         <Property Name="Act2ActIPCTimeout">0</Property>
+         <Property Name="ExpressionSemanticCheckFlag">0</Property>
+         <Property Name="TraceOption">0</Property>
+         <Property Name="EnableCacheSharing">0</Property>
+         <Property Name="RuntimeColumnPropagation">0</Property>
+         <Property Name="RelStagesInJobStatus">-1</Property>
+         <Property Name="WebServiceEnabled">0</Property>
+         <Property Name="MFProcessMetaData">0</Property>
+         <Property Name="MFProcessMetaDataXMLFileExchangeMethod">0</Property>
+         <Property Name="IMSProgType">0</Property>
+         <Property Name="CopyLibPrefix">ARDT</Property>
+         <Property Name="RecordPerformanceResults">0</Property>
+      </Record>
+      <Record Identifier="V0" Readonly="0" Type="ContainerView">
+         <Property Name="Name">Job</Property>
+         <Property Name="NextID">1</Property>
+         <Property Name="IsTopLevel">0</Property>
+         <Property Name="StageList">V2S0|V2S1|V0S7|V0S8</Property>
+         <Property Name="StageXPos">336|120|576|816</Property>
+         <Property Name="StageYPos">240|240|240|240</Property>
+         <Property Name="StageTypes">CCustomStage.STP|CCustomStage.DSDB2|CTransformerStage|CCustomStage.DSDB2</Property>
+         <Property Name="NextStageID">20</Property>
+         <Property Name="SnapToGrid">1</Property>
+         <Property Name="GridLines">0</Property>
+         <Property Name="ZoomValue">100</Property>
+         <Property Name="StageXSize">48|48|48|48</Property>
+         <Property Name="StageYSize">48|48|48|48</Property>
+         <Property Name="ContainerViewSizing">0044 0058 0487 0457 0000 0001 0000 0000</Property>
+         <Property Name="StageNames">DWDM1_Maintnc_Renwl_Fact_Trgt|prepare_parameter|Transformer|Abort_Job</Property>
+         <Property Name="StageTypeIDs">STPPX|DSDB2PX|CTransformerStage|DSDB2PX</Property>
+         <Property Name="LinkNames">status_9|insert|abort|\(20)</Property>
+         <Property Name="LinkHasMetaDatas">True|True|True|\(20)</Property>
+         <Property Name="LinkTypes">1|1|1|\(20)</Property>
+         <Property Name="LinkNamePositionXs">518|240|661|\(20)</Property>
+         <Property Name="LinkNamePositionYs">256|264|273|\(20)</Property>
+         <Property Name="TargetStageIDs">V0S7|V2S0|V0S8|\(20)</Property>
+         <Property Name="SourceStageEffectiveExecutionModes">1|1|2|\(20)</Property>
+         <Property Name="SourceStageRuntimeExecutionModes">1|1|2|\(20)</Property>
+         <Property Name="TargetStageEffectiveExecutionModes">2|1|1|\(20)</Property>
+         <Property Name="TargetStageRuntimeExecutionModes">2|1|1|\(20)</Property>
+         <Property Name="LinkIsSingleOperatorLookup">False|False|False|\(20)</Property>
+         <Property Name="LinkIsSortSequential">False|False|False|\(20)</Property>
+         <Property Name="LinkSortMode">0|0|0|\(20)</Property>
+         <Property Name="LinkPartColMode">1|1|1|\(20)</Property>
+         <Property Name="LinkSourcePinIDs">V2S0P3|V2S1P1|V0S7P2|\(20)</Property>
+      </Record>
+      <Record Identifier="V0S7" Readonly="0" Type="TransformerStage">
+         <Property Name="Name">Transformer</Property>
+         <Property Name="NextID">6</Property>
+         <Property Name="InputPins">V0S7P1</Property>
+         <Property Name="OutputPins">V0S7P2</Property>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TrxGenCode</Property>
+               <Property Name="Value" PreFormatted="1">//
+// Generated file to implement the V0S7_Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt_Transformer transform operator.
+//
+
+// define our input/output link names
+inputname 0 status_9;
+outputname 0 abort;
+
+initialize {
+	// define our control variables
+	int8 RowRejected0;
+	int8 NullSetVar0;
+
+}
+
+mainloop {
+
+	// initialise the rejected row variable
+	RowRejected0 = 1;
+
+	// evaluate constraint and columns for link: abort
+	if ((status_9.P_STATUS != 0))
+	{
+		abort.dummy_columns = 1;
+		writerecord 0;
+		RowRejected0 = 0;
+	}
+}
+
+finish {
+}
+</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TrxClassName</Property>
+               <Property Name="Value">V0S7_Call_SP_DP_Insrt_Maint_Renwl_Fact_Trgt_Transformer</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">OldNullHandling</Property>
+               <Property Name="Value">1</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">TrxGenCache</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="ValidationStatus">0</Property>
+         <Property Name="StageType">CTransformerStage</Property>
+         <Property Name="BlockSize">0</Property>
+         <Property Name="StageVarsMinimised">0</Property>
+         <Property Name="LoopVarsMaximised">0</Property>
+         <Property Name="MaxLoopIterations">0</Property>
+      </Record>
+      <Record Identifier="V0S7P1" Readonly="0" Type="TrxInput">
+         <Property Name="Name">status_9</Property>
+         <Property Name="Partner">V2S0|V2S0P3</Property>
+         <Property Name="LinkType">1</Property>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">RTColumnProp</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">Schema</Property>
+               <Property Name="Value" PreFormatted="1">record
+(
+  P_STATUS:int32;
+)</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="MultiRow">0</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V0S7P2" Readonly="0" Type="TrxOutput">
+         <Property Name="Name">abort</Property>
+         <Property Name="Partner">V0S8|V0S8P1</Property>
+         <Property Name="Constraint">status_9.P_STATUS&lt;&gt;0</Property>
+         <Property Name="Reject">0</Property>
+         <Property Name="ErrorPin">0</Property>
+         <Property Name="RowLimit">0</Property>
+         <Property Name="ParsedConstraint">status_9.P_STATUS &lt;&gt; 0</Property>
+         <Property Name="SourceColumns">status_9.P_STATUS</Property>
+         <Collection Name="Columns" Type="OutputColumn">
+            <SubRecord>
+               <Property Name="Name">dummy_columns</Property>
+               <Property Name="SqlType">-5</Property>
+               <Property Name="Precision">0</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Derivation">1</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">1</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar" />
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">DiskWriteInc</Property>
+               <Property Name="Value">1048576</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">BufFreeRun</Property>
+               <Property Name="Value">50</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">MaxMemBufSize</Property>
+               <Property Name="Value">3145728</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">QueueUpperSize</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">Schema</Property>
+               <Property Name="Value" PreFormatted="1">record
+(
+  dummy_columns:int64;
+)</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="LeftTextPos">661</Property>
+         <Property Name="TopTextPos">273</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V0S8" Readonly="0" Type="CustomStage">
+         <Property Name="Name">Abort_Job</Property>
+         <Property Name="Description">INSERT INTO sns.dummytable (dummy_columns) VALUES (?);</Property>
+         <Property Name="NextID">2</Property>
+         <Property Name="InputPins">V0S8P1</Property>
+         <Property Name="StageType">DSDB2PX</Property>
+         <Property Name="AllowColumnMapping">0</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">SERVER</Property>
+               <Property Name="Value">#$DSS_DB_NAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERNAME</Property>
+               <Property Name="Value">#$DSS_DB_USERNAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PASSWORD</Property>
+               <Property Name="Value">HD:D1:V0=9C&gt;0?5IE9JD0K9EBMMM=0UDCU;Ok68d&gt;0QOATO8</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ISOLATION</Property>
+               <Property Name="Value">Cursor Stability</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">charset</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NextRecordID">0</Property>
+      </Record>
+      <Record Identifier="V0S8P1" Readonly="0" Type="CustomInput">
+         <Property Name="Name">abort</Property>
+         <Property Name="Partner">V0S7|V0S7P2</Property>
+         <Property Name="LinkType">1</Property>
+         <Property Name="ConditionNotMet">fail</Property>
+         <Property Name="LookupFail">fail</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">TARGETTABLE</Property>
+               <Property Name="Value">sns.dummytable</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TRANSSIZE</Property>
+               <Property Name="Value">100</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PARRARYSIZE</Property>
+               <Property Name="Value">50</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">INPUTMODE</Property>
+               <Property Name="Value">insert</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CREATETABLE</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENCREATEDDL</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CREATEDDL</Property>
+               <Property Name="Value" PreFormatted="1">CREATE TABLE sns.dummytable (
+dummy_columns BIGINT NOT NULL
+ )
+</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TABLESPACE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PARTKEY</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DROPTABLE</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENDROPDDL</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DROPDDL</Property>
+               <Property Name="Value">DROP TABLE sns.dummytable</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SQLBUILDERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FULLYGENSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERSQL</Property>
+               <Property Name="Value">INSERT INTO sns.dummytable (dummy_columns) VALUES (?);</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">BEFORESQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTBEFORESQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">AFTERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTAFTERSQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENSQL</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">RTColumnProp</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="TransactionSize">0</Property>
+         <Property Name="TXNBehaviour">0</Property>
+         <Property Name="EnableTxGroup">0</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V2S0" Readonly="0" Type="CustomStage">
+         <Property Name="Name">DWDM1_Maintnc_Renwl_Fact_Trgt</Property>
+         <Property Name="Description" PreFormatted="1">#$DSS_DB_PASSWD#
+
+</Property>
+         <Property Name="NextID">4</Property>
+         <Property Name="InputPins">V2S0P1</Property>
+         <Property Name="OutputPins">V2S0P3</Property>
+         <Property Name="StageType">STPPX</Property>
+         <Property Name="AllowColumnMapping">0</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">DBVENDOR</Property>
+               <Property Name="Value">DB2</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DATASRC</Property>
+               <Property Name="Value">#$DSS_DB_NAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERID</Property>
+               <Property Name="Value">#$DSS_DB_USERNAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PASSWORD</Property>
+               <Property Name="Value">HD:D1:V0=9C&gt;0?5IE9JD0K9EBMMM=0UDCU;Ok68d&gt;0QOATO8</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DATABASE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">STDPROC</Property>
+               <Property Name="Value">DWDM1.DP_INSRT_MAINT_RENWL_FACT_TRGT</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENSTD</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TYPEPROC</Property>
+               <Property Name="Value">Transform</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PROCSTMT</Property>
+               <Property Name="Value">CALL DWDM1.DP_INSRT_MAINT_RENWL_FACT_TRGT(?, ?, ?, ?);</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FATALCD</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">WARNINGCD</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SPPARAM</Property>
+               <Property Name="Value">P_LOG_NAME-+-P_LOG_NAME-+-?-+-I+-+P_END_DATE-+-P_END_DATE-+-?-+-I+-+P_START_DATE-+-P_START_DATE-+-?-+-I+-+P_STATUS-+-P_STATUS-+-?-+-O</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TX_ISO_LEVEL</Property>
+               <Property Name="Value">None</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TRANSMODE</Property>
+               <Property Name="Value">ANSI</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CLIENTCHARSET</Property>
+               <Property Name="Value">Default</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DBPROCTYPE</Property>
+               <Property Name="Value">Stored procedure</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">charset</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NextRecordID">0</Property>
+      </Record>
+      <Record Identifier="V2S0P1" Readonly="0" Type="CustomInput">
+         <Property Name="Name">insert</Property>
+         <Property Name="Partner">V2S1|V2S1P1</Property>
+         <Property Name="LinkType">1</Property>
+         <Property Name="ConditionNotMet">fail</Property>
+         <Property Name="LookupFail">fail</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">FRDATA</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TRANSSIZE</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FEROW</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">RTColumnProp</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">SeqSort</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="TransactionSize">0</Property>
+         <Property Name="TXNBehaviour">0</Property>
+         <Property Name="EnableTxGroup">0</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V2S0P3" Readonly="0" Type="CustomOutput">
+         <Property Name="Name">status_9</Property>
+         <Property Name="Partner">V0S7|V0S7P1</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">STLINK</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MROWS</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">EODRC</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ACTIVITYCOUNT</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="Columns" Type="OutputColumn">
+            <SubRecord>
+               <Property Name="Name">P_STATUS</Property>
+               <Property Name="SqlType">4</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar" />
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">DiskWriteInc</Property>
+               <Property Name="Value">1048576</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">BufFreeRun</Property>
+               <Property Name="Value">50</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">MaxMemBufSize</Property>
+               <Property Name="Value">3145728</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">QueueUpperSize</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="LeftTextPos">518</Property>
+         <Property Name="TopTextPos">256</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V2S1" Readonly="0" Type="CustomStage">
+         <Property Name="Name">prepare_parameter</Property>
+         <Property Name="Description">#$DSS_DB_PASSWD#</Property>
+         <Property Name="NextID">2</Property>
+         <Property Name="OutputPins">V2S1P1</Property>
+         <Property Name="StageType">DSDB2PX</Property>
+         <Property Name="AllowColumnMapping">0</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">SERVER</Property>
+               <Property Name="Value">#$DSS_DB_NAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERNAME</Property>
+               <Property Name="Value">#$DSS_DB_USERNAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PASSWORD</Property>
+               <Property Name="Value">HD:D1:V0=9C&gt;0?5IE9JD0K9EBMMM=0UDCU;Ok68d&gt;0QOATO8</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ISOLATION</Property>
+               <Property Name="Value">Cursor Stability</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">charset</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NextRecordID">0</Property>
+      </Record>
+      <Record Identifier="V2S1P1" Readonly="0" Type="CustomOutput">
+         <Property Name="Name">insert</Property>
+         <Property Name="Partner">V2S0|V2S0P1</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">SOURCETABLES</Property>
+               <Property Name="Value">ods_dbo4.trgt_tmp</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PREFETCH</Property>
+               <Property Name="Value">50</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">WHERE_CLAUSE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">OTHER_CLAUSES</Property>
+               <Property Name="Value">with ur</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SQLBUILDERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FULLYGENSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERSQL</Property>
+               <Property Name="Value" PreFormatted="1">SELECT 
+    '#P_LOG_NAME#' AS P_LOG_NAME,cast(    CASE WHEN '#P_END_DATE#' = 'DEFAULT' THEN CAST(YEAR(CURRENT DATE)-1 AS CHAR(4)) || '-09-30' ELSE '#P_END_DATE#' END    as char(10)) as P_END_DATE,cast(    CASE WHEN '#P_START_DATE#' = 'DEFAULT' THEN '2007-12-31' ELSE '#P_START_DATE#' END  as char(10)) as P_START_DATE,
+    0 AS P_STATUS
+FROM  SYSIBM.SYSDUMMY1 WITH UR;</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">BEFORESQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTBEFORESQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">AFTERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTAFTERSQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENSQL</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="Columns" Type="OutputColumn">
+            <SubRecord>
+               <Property Name="Name">P_LOG_NAME</Property>
+               <Property Name="SqlType">12</Property>
+               <Property Name="Precision">128</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar" />
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">P_END_DATE</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar" />
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">P_START_DATE</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar" />
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">P_STATUS</Property>
+               <Property Name="SqlType">4</Property>
+               <Property Name="Precision">0</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar" />
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">DiskWriteInc</Property>
+               <Property Name="Value">1048576</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">BufFreeRun</Property>
+               <Property Name="Value">50</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">MaxMemBufSize</Property>
+               <Property Name="Value">3145728</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">QueueUpperSize</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="LeftTextPos">240</Property>
+         <Property Name="TopTextPos">264</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+   </Job>
+</DSExport>

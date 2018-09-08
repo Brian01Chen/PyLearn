@@ -1,0 +1,2147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSExport>
+   <Header CharacterSet="CP1252" ExportingTool="IBM InfoSphere DataStage Export" ToolVersion="8" ServerName="ELIMINATOR.AUSTIN.IBM.COM" ToolInstanceID="dswdw_fvt" Date="2016-12-06" Time="08.47.28" ServerVersion="8.7"/>
+   <Job Identifier="Insrt_Updted_Entmt_Sum_Fact_Flat" DateModified="2016-10-10" TimeModified="00.58.10">
+      <Record Identifier="ROOT" Type="JobDefn" Readonly="0">
+         <Property Name="Name">Insrt_Updted_Entmt_Sum_Fact_Flat</Property>
+         <Property Name="NextID">5</Property>
+         <Property Name="Container">V0</Property>
+         <Property Name="JobVersion">56.0.0</Property>
+         <Property Name="ControlAfterSubr">0</Property>
+         <Collection Name="Parameters" Type="Parameters">
+            <SubRecord>
+               <Property Name="Name">$DSS_DB_NAME</Property>
+               <Property Name="Prompt">Enter the DSS DB Alias Name</Property>
+               <Property Name="Default">$PROJDEF</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">$DSS_DB_USERNAME</Property>
+               <Property Name="Prompt">Enter the DSS DB User Name</Property>
+               <Property Name="Default">$PROJDEF</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">$DSS_DB_PASSWD</Property>
+               <Property Name="Prompt">Enter the DSS DB Password</Property>
+               <Property Name="Default">HDI@IJV8O9JN064IL:JD1K95</Property>
+               <Property Name="ParamType">1</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LAST_ESF_TS</Property>
+               <Property Name="Prompt">Enter the max mod_date when process ran last time for ESF table</Property>
+               <Property Name="Default">2011-7-1 23:18:24.282850</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CUR_ESF_TS</Property>
+               <Property Name="Prompt">Enter the current max mod_date for ESF table</Property>
+               <Property Name="Default">2012-02-14 23:18:24.282850</Property>
+               <Property Name="ParamType">0</Property>
+               <Property Name="ParamLength">0</Property>
+               <Property Name="ParamScale">0</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">AdvancedRuntimeOptions</Property>
+               <Property Name="Value">#DSProjectARTOptions#</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NULLIndicatorPosition">0</Property>
+         <Property Name="IsTemplate">0</Property>
+         <Property Name="NLSLocale">,,,,</Property>
+         <Property Name="JobType">0</Property>
+         <Property Name="Category">\Jobs\Entitlement</Property>
+         <Property Name="CenturyBreakYear">30</Property>
+         <Property Name="NextAliasID">2</Property>
+         <Property Name="ParameterFileDDName">DD00001</Property>
+         <Property Name="ReservedWordCheck">1</Property>
+         <Property Name="TransactionSize">0</Property>
+         <Property Name="ValidationStatus">0</Property>
+         <Property Name="Uploadable">0</Property>
+         <Property Name="PgmCustomizationFlag">0</Property>
+         <Property Name="JobReportFlag">0</Property>
+         <Property Name="AllowMultipleInvocations">0</Property>
+         <Property Name="Act2ActOverideDefaults">0</Property>
+         <Property Name="Act2ActEnableRowBuffer">0</Property>
+         <Property Name="Act2ActUseIPC">0</Property>
+         <Property Name="Act2ActBufferSize">0</Property>
+         <Property Name="Act2ActIPCTimeout">0</Property>
+         <Property Name="ExpressionSemanticCheckFlag">0</Property>
+         <Property Name="TraceOption">0</Property>
+         <Property Name="EnableCacheSharing">0</Property>
+         <Property Name="RuntimeColumnPropagation">1</Property>
+         <Property Name="RelStagesInJobStatus">-1</Property>
+         <Property Name="WebServiceEnabled">0</Property>
+         <Property Name="MFProcessMetaData">0</Property>
+         <Property Name="MFProcessMetaDataXMLFileExchangeMethod">0</Property>
+         <Property Name="IMSProgType">0</Property>
+         <Property Name="CopyLibPrefix">ARDT</Property>
+         <Property Name="RecordPerformanceResults">0</Property>
+      </Record>
+      <Record Identifier="V0" Type="ContainerView" Readonly="0">
+         <Property Name="Name">Job</Property>
+         <Property Name="NextID">1</Property>
+         <Property Name="IsTopLevel">0</Property>
+         <Property Name="StageList">V0S0|V0S3|V1S0|V4S0</Property>
+         <Property Name="StageXPos">24|384|720|384</Property>
+         <Property Name="StageYPos">504|504|504|312</Property>
+         <Property Name="StageTypes">CCustomStage.DSDB2|CTransformerStage|CCustomStage.DSDB2|CHashedFileStage</Property>
+         <Property Name="NextStageID">19</Property>
+         <Property Name="SnapToGrid">1</Property>
+         <Property Name="GridLines">0</Property>
+         <Property Name="ZoomValue">100</Property>
+         <Property Name="StageXSize">48|48|48|48</Property>
+         <Property Name="StageYSize">48|48|48|48</Property>
+         <Property Name="ContainerViewSizing">0000 0000 1172 0715 0000 0001 0000 0240</Property>
+         <Property Name="StageNames">ENTL1_Entmt_Sum_Fact|Transformer|ENTL1_Entmt_Sum_Fact_Flat|Hashed_File</Property>
+         <Property Name="StageTypeIDs">DSDB2|CTransformerStage|DSDB2|CHashedFileStage</Property>
+         <Property Name="LinkNames">to_trans|to_insert| |from_esf_sns</Property>
+         <Property Name="LinkHasMetaDatas">True|True| |True</Property>
+         <Property Name="LinkTypes">1|1| |2</Property>
+         <Property Name="LinkNamePositionXs">224|642| |389</Property>
+         <Property Name="LinkNamePositionYs">514|528| |402</Property>
+         <Property Name="TargetStageIDs">V0S3|V1S0| |V0S3</Property>
+         <Property Name="SourceStageEffectiveExecutionModes">0|0| |0</Property>
+         <Property Name="SourceStageRuntimeExecutionModes">0|0| |0</Property>
+         <Property Name="TargetStageEffectiveExecutionModes">0|0| |0</Property>
+         <Property Name="TargetStageRuntimeExecutionModes">0|0| |0</Property>
+         <Property Name="LinkIsSingleOperatorLookup">False|False| |False</Property>
+         <Property Name="LinkIsSortSequential">False|False| |False</Property>
+         <Property Name="LinkSortMode">0|0| |0</Property>
+         <Property Name="LinkPartColMode">0|0| |0</Property>
+         <Property Name="LinkSourcePinIDs">V0S0P1|V0S3P2| |V4S0P2</Property>
+      </Record>
+      <Record Identifier="V0S0" Type="CustomStage" Readonly="0">
+         <Property Name="Name">ENTL1_Entmt_Sum_Fact</Property>
+         <Property Name="NextID">2</Property>
+         <Property Name="OutputPins">V0S0P1</Property>
+         <Property Name="StageType">DSDB2</Property>
+         <Property Name="AllowColumnMapping">0</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">SERVER</Property>
+               <Property Name="Value">#$DSS_DB_NAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERNAME</Property>
+               <Property Name="Value">#$DSS_DB_USERNAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PASSWORD</Property>
+               <Property Name="Value">HD:D1:V0=9C&gt;0?5IE9JD0K9EBMMM=0UDCU;Ok68d&gt;0QOATO8</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ISOLATION</Property>
+               <Property Name="Value">Uncommitted Read</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NextRecordID">0</Property>
+      </Record>
+      <Record Identifier="V0S0P1" Type="CustomOutput" Readonly="0">
+         <Property Name="Name">to_trans</Property>
+         <Property Name="Partner">V0S3|V0S3P3</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">SOURCETABLES</Property>
+               <Property Name="Value">SODS2.MNGED_ENTMT_ORD_DTL d, rshr2.prod_dimnsn pd,ENTL1.EVOLTN_DTL_FACT edf</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PREFETCH</Property>
+               <Property Name="Value">500</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">WHERE_CLAUSE</Property>
+               <Property Name="Value" PreFormatted="1">WHERE d.PART_NUM = pd.part_num 
+AND d.PROD_EVOLTN_CODE &lt;&gt; 0 
+AND d.SAP_ODS_MOD_DATE between &apos;#LAST_MEOD_TS#&apos; and &apos;#CUR_MEOD_TS#&apos;
+and d.SAP_SALES_ORG_CODE=edf.SAP_SALES_ORG_CODE
+and d.SOLD_TO_CUST_NUM=edf.SOLD_TO_CUST_NUM
+and d.RENWL_CUST_NUM=edf.RENWL_CUST_NUM
+and d.SAP_CTRCT_NUM=edf.SAP_CTRCT_NUM
+and d.MNGED_ENTMT_PROG=edf.MNGED_ENTMT_PROG
+and d.SW_SBSCRPTN_ID=edf.SW_SBSCRPTN_ID
+and d.REVN_STREAM_CODE=edf.REVN_STREAM_CODE
+and d.START_DATE=edf.START_DATE
+and d.END_DATE=edf.END_DATE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">OTHER_CLAUSES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SQLBUILDERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FULLYGENSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERSQL</Property>
+               <Property Name="Value" PreFormatted="1">with temp as (SELECT distinct 
+    sold_to_cust_num,
+    f.sw_sbscrptn_id,
+    line_of_bus_code,
+    line_of_bus_code_dscr,
+    sap_ctrct_num,
+    ALT_SW_PROD_BRAND_CODE,
+    ALT_SW_PROD_BRAND_CODE_DSCR,
+    mnged_entmt_prog 
+    FROM ENTL1.ENTMT_SUM_FACT f 
+    LEFT OUTER JOIN rshr2.sw_sbscrptn_id_part_num_xref  x
+    ON x.SW_SBSCRPTN_ID=f.SW_SBSCRPTN_ID
+    where f.MOD_DATE &gt; &apos;#LAST_ESF_TS#&apos; and f.MOD_DATE&lt;= &apos;#CUR_ESF_TS#&apos;
+      )
+
+, temp2 as (
+SELECT
+    --sap_sales_org_code,
+    sold_to_cust_num,
+    sw_sbscrptn_id,
+    line_of_bus_code,
+    line_of_bus_code_dscr,
+    sap_ctrct_num,
+    ALT_SW_PROD_BRAND_CODE,
+    ALT_SW_PROD_BRAND_CODE_DSCR,
+    CAST(sum(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;LIC&apos; AND Curr_Period_Flag IN (&apos;A&apos;, &apos;F&apos;) 
+        THEN COALESCE(NET_SBSCRPTN_ID_QTY,0) ELSE 0 END) as DECIMAL(15,3)) AS lic_subscrptn_id_qty,
+    CAST(sum(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;SNS&apos; AND Curr_Period_Flag = &apos;A&apos;
+        THEN COALESCE(NET_SBSCRPTN_ID_QTY,0) ELSE 0 END) as DECIMAL(15,3)) AS actv_sns_sbscrptn_id_qty,
+   CAST( sum(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;SNS&apos; AND Curr_Period_Flag = &apos;F&apos; 
+        THEN COALESCE(NET_SBSCRPTN_ID_QTY,0) ELSE 0 END) as DECIMAL(15,3)) AS future_sns_sbscrptn_id_qty,
+    CAST(sum(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;FIXTERM&apos;  AND Curr_Period_Flag = &apos;A&apos;
+        THEN COALESCE(NET_SBSCRPTN_ID_QTY,0) ELSE 0 END) as DECIMAL(15,3)) AS fixterm_sbscrptn_id_qty,
+    CAST(sum(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;MTHLYLIC&apos;  AND Curr_Period_Flag = &apos;A&apos;
+        THEN COALESCE(NET_SBSCRPTN_ID_QTY,0) ELSE 0 END) as DECIMAL(15,3)) AS mthly_lic_sbscrptn_id_qty,
+    CAST(sum(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;SAAS&apos;  AND Curr_Period_Flag = &apos;A&apos;
+        THEN COALESCE(NET_SBSCRPTN_ID_QTY,0) ELSE 0 END) as DECIMAL(15,3)) AS saas_sbscrptn_id_qty,
+    MAX(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;SNS&apos; AND Curr_Period_Flag = &apos;A&apos; AND (COUNTOF-zero_qty_flag) &gt; 0 THEN
+             CASE WHEN (COUNTOF-zero_qty_flag) &gt; 1 THEN &apos;Multiple&apos; ELSE CHAR(end_date) END
+    ELSE &apos;&apos;
+    END) AS ACTV_SNS_END_DATE,
+    MAX(CASE WHEN entmt_sys_revn_stream_cat_code = &apos;SNS&apos; AND Curr_Period_Flag = &apos;F&apos; AND (COUNTOF-zero_qty_flag) &gt; 0 THEN
+         CASE WHEN (COUNTOF-zero_qty_flag) &gt; 1 THEN &apos;Multiple&apos; ELSE CHAR(end_date) end
+    ELSE &apos;&apos;
+    END) AS future_sns_end_date,
+    mnged_entmt_prog,
+    current timestamp as ts
+FROM
+    (
+        SELECT
+            --Sap_Sales_Org_Code,
+            f.Sold_To_Cust_Num,
+            f.Sw_Sbscrptn_Id,
+             f.line_of_bus_code,
+              f.line_of_bus_code_dscr,
+            f.Sap_Ctrct_Num,
+            f.ENTMT_SYS_REVN_STREAM_CAT_CODE,
+            CASE WHEN end_date &lt; CURRENT DATE THEN &apos;P&apos; 
+                 WHEN start_date &gt; CURRENT DATE THEN &apos;F&apos;
+            ELSE &apos;A&apos; END Curr_Period_Flag,
+            SUM (NET_SBSCRPTN_ID_QTY) AS NET_SBSCRPTN_ID_QTY,
+            MAX (CASE WHEN NET_SBSCRPTN_ID_QTY&lt;&gt;0 THEN end_date ELSE &apos;1900-01-01 00:00:00.000000&apos; END) AS end_date,
+            COUNT (DISTINCT (CASE WHEN NET_SBSCRPTN_ID_QTY&lt;&gt;0 THEN end_date ELSE &apos;1900-01-01 00:00:00.000000&apos; END)) AS countof,
+            MAX (CASE WHEN NET_SBSCRPTN_ID_QTY&lt;&gt;0 THEN 0 ELSE 1 END) AS zero_qty_flag,
+            x.ALT_SW_PROD_BRAND_CODE,
+            x.ALT_SW_PROD_BRAND_CODE_DSCR,
+            f.mnged_entmt_prog
+        FROM ENTL1.ENTMT_SUM_FACT f
+        INNER JOIN temp t
+        ON f.sold_to_cust_num=t.sold_to_cust_num
+        and f.sw_sbscrptn_id=t.sw_sbscrptn_id
+        and f.line_of_bus_code=t.line_of_bus_code
+        and f.line_of_bus_code_dscr=t.line_of_bus_code_dscr
+        and f.sap_ctrct_num=t.sap_ctrct_num
+        and f.mnged_entmt_prog=t.mnged_entmt_prog
+        LEFT OUTER JOIN rshr2.sw_sbscrptn_id_part_num_xref  x
+        ON f.SW_SBSCRPTN_ID=x.SW_SBSCRPTN_ID
+           and COALESCE(x.ALT_SW_PROD_BRAND_CODE,&apos;&apos;)=COALESCE(t.ALT_SW_PROD_BRAND_CODE,&apos;&apos;)
+           and COALESCE(x.ALT_SW_PROD_BRAND_CODE_DSCR,&apos;&apos;)=COALESCE(t.ALT_SW_PROD_BRAND_CODE_DSCR,&apos;&apos;)
+        where  f.INACT_FLAG=0
+        GROUP BY
+            --Sap_Sales_Org_Code,
+            f.Sold_To_Cust_Num,
+            f.Sw_Sbscrptn_Id,
+             f.line_of_bus_code,
+              f.line_of_bus_code_dscr,
+            f.Sap_Ctrct_Num,
+            x.ALT_SW_PROD_BRAND_CODE,
+            x.ALT_SW_PROD_BRAND_CODE_DSCR,
+            f.ENTMT_SYS_REVN_STREAM_CAT_CODE,
+            f.mnged_entmt_prog,
+            CASE WHEN end_date &lt; CURRENT DATE THEN &apos;P&apos; WHEN start_date &gt; CURRENT DATE THEN &apos;F&apos; ELSE &apos;A&apos; END
+    )
+
+group by 
+    --sap_sales_org_code,
+    sold_to_cust_num,
+    sw_sbscrptn_id,
+    line_of_bus_code,
+    line_of_bus_code_dscr,
+    sap_ctrct_num,
+    ALT_SW_PROD_BRAND_CODE,
+    ALT_SW_PROD_BRAND_CODE_DSCR,
+    mnged_entmt_prog
+)
+
+,temp3 as
+(select distinct Sold_To_Cust_Num,Sw_Sbscrptn_Id,Mnged_Entmt_Prog,Sap_Ctrct_Num,
+case when ENTMT_SYS_REVN_STREAM_CAT_CODE in (&apos;LIC&apos;,&apos;SNS&apos;,&apos;FIXTERM&apos;,&apos;OTHER&apos;) then 1
+when ENTMT_SYS_REVN_STREAM_CAT_CODE=&apos;MTHLYLIC&apos; then 10
+when ENTMT_SYS_REVN_STREAM_CAT_CODE=&apos;SAAS&apos; then 100 end as RSC_CODE_NUM
+from ENTL1.ENTMT_SUM_FACT)
+
+,temp4 as
+(select Sold_To_Cust_Num,Sw_Sbscrptn_Id,Mnged_Entmt_Prog,Sap_Ctrct_Num,sum(RSC_CODE_NUM) RSC_CODE_NUM_SUM
+from temp3 
+group by Sold_To_Cust_Num,Sw_Sbscrptn_Id,Mnged_Entmt_Prog,Sap_Ctrct_Num)
+
+,temp5 as  --added by susie on July 27 2016
+(
+select Sold_To_Cust_Num,Sw_Sbscrptn_Id,Mnged_Entmt_Prog,Sap_Ctrct_Num ,min(start_date) as MIN_SNS_Start_Date
+from ENTL1.ENTMT_SUM_FACT ESF
+where ESF.START_DATE &lt;&gt; &apos;1900-01-01&apos; AND ESF.NET_SBSCRPTN_ID_QTY &lt;&gt; 0
+group by 
+Sold_To_Cust_Num,Sw_Sbscrptn_Id,Mnged_Entmt_Prog,Sap_Ctrct_Num
+)
+
+
+SELECT temp2.Sold_To_Cust_Num,
+temp2.sw_sbscrptn_id,
+temp2.line_of_bus_code,
+temp2.line_of_bus_code_dscr,
+temp2.sap_ctrct_num,
+temp2.ALT_SW_PROD_BRAND_CODE,
+temp2.ALT_SW_PROD_BRAND_CODE_DSCR,
+temp2.lic_subscrptn_id_qty,
+temp2.actv_sns_sbscrptn_id_qty,
+temp2.future_sns_sbscrptn_id_qty,
+temp2.fixterm_sbscrptn_id_qty,
+temp2.mthly_lic_sbscrptn_id_qty,
+temp2.saas_sbscrptn_id_qty,
+temp2.ACTV_SNS_END_DATE,
+temp2.future_sns_end_date,
+temp2.mnged_entmt_prog,
+temp2.ts,
+CASE WHEN temp4.RSC_CODE_NUM_SUM=100 THEN &apos;SAAS&apos;
+WHEN temp4.RSC_CODE_NUM_SUM=10 THEN &apos;MTHLYLIC&apos;
+WHEN temp4.RSC_CODE_NUM_SUM=1  THEN &apos;PRPETUAL&apos;
+WHEN temp4.RSC_CODE_NUM_SUM=11 THEN &apos;PRPETML&apos; END AS Cust_Prod_Portfolio_Code,
+temp5.MIN_SNS_Start_Date
+
+FROM temp2
+LEFT OUTER JOIN temp4 ON
+(temp2.Sold_To_Cust_Num=temp4.Sold_To_Cust_Num
+AND temp2.sw_sbscrptn_id=temp4.sw_sbscrptn_id
+AND temp2.sap_ctrct_num=temp4.sap_ctrct_num
+AND temp2.mnged_entmt_prog=temp4.mnged_entmt_prog)
+
+-- added by susie on July 27 2016
+
+LEFT OUTER JOIN temp5 ON
+(temp2.Sold_To_Cust_Num=temp5.Sold_To_Cust_Num
+AND temp2.sw_sbscrptn_id=temp5.sw_sbscrptn_id
+AND temp2.sap_ctrct_num=temp5.sap_ctrct_num
+AND temp2.mnged_entmt_prog=temp5.mnged_entmt_prog)
+
+WITH UR;</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">BEFORESQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTBEFORESQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">AFTERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTAFTERSQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENSQL</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TABLE</Property>
+               <Property Name="Value">SODS2.MNGED_ENTMT_ORD_DTL d, rshr2.prod_dimnsn pd,ENTL1.EVOLTN_DTL_FACT edf</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="Columns" Type="OutputColumn">
+            <SubRecord>
+               <Property Name="Name">SOLD_TO_CUST_NUM</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.SOLD_TO_CUST_NUM</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.SOLD_TO_CUST_NUM</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.SOLD_TO_CUST_NUM</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SOLD_TO_CUST_NUM</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SW_SBSCRPTN_ID</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">12</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">12</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.SW_SBSCRPTN_ID</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.SW_SBSCRPTN_ID</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.SW_SBSCRPTN_ID</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SW_SBSCRPTN_ID</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LINE_OF_BUS_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">2</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">2</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.LINE_OF_BUS_CODE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.LINE_OF_BUS_CODE</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.LINE_OF_BUS_CODE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">LINE_OF_BUS_CODE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">40</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">40</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SAP_CTRCT_NUM</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.SAP_CTRCT_NUM</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.SAP_CTRCT_NUM</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.SAP_CTRCT_NUM</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SAP_CTRCT_NUM</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">8</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">8</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">12</Property>
+               <Property Name="Precision">40</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">40</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MTHLY_LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.MNTHLY_SW_LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ACTV_SNS_END_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.ACTV_SNS_END_DATE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.ACTV_SNS_END_DATE</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.ACTV_SNS_END_DATE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ACTV_SNS_END_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FUTR_SNS_END_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.FUTR_SNS_END_DATE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.FUTR_SNS_END_DATE</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.FUTR_SNS_END_DATE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">FUTR_SNS_END_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MNGED_ENTMT_PROG</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">5</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">5</Property>
+               <Property Name="Derivation">ENTMT_SUM_FACT_FLAT.MNGED_ENTMT_PROG</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">ENTMT_SUM_FACT_FLAT.MNGED_ENTMT_PROG</Property>
+               <Property Name="SourceColumn">ENTMT_SUM_FACT_FLAT.MNGED_ENTMT_PROG</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MNGED_ENTMT_PROG</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ts</Property>
+               <Property Name="SqlType">11</Property>
+               <Property Name="Precision">0</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CUST_PROD_PORTFOLIO_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">8</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">8</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MIN_SNS_Start_Date</Property>
+               <Property Name="SqlType">9</Property>
+               <Property Name="Precision">0</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="LeftTextPos">224</Property>
+         <Property Name="TopTextPos">514</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V0S3" Type="TransformerStage" Readonly="0">
+         <Property Name="Name">Transformer</Property>
+         <Property Name="NextID">7</Property>
+         <Property Name="InputPins">V0S3P3|V0S3P6</Property>
+         <Property Name="OutputPins">V0S3P2</Property>
+         <Property Name="ValidationStatus">0</Property>
+         <Property Name="StageType">CTransformerStage</Property>
+         <Property Name="BlockSize">0</Property>
+         <Property Name="StageVarsMinimised">0</Property>
+         <Property Name="LoopVarsMaximised">0</Property>
+         <Property Name="MaxLoopIterations">0</Property>
+      </Record>
+      <Record Identifier="V0S3P2" Type="TrxOutput" Readonly="0">
+         <Property Name="Name">to_insert</Property>
+         <Property Name="Partner">V1S0|V1S0P3</Property>
+         <Property Name="Reject">0</Property>
+         <Property Name="ErrorPin">0</Property>
+         <Property Name="RowLimit">0</Property>
+         <Collection Name="Columns" Type="OutputColumn">
+            <SubRecord>
+               <Property Name="Name">SOLD_TO_CUST_NUM</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">to_trans.SOLD_TO_CUST_NUM</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.SOLD_TO_CUST_NUM</Property>
+               <Property Name="SourceColumn">to_trans.SOLD_TO_CUST_NUM</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SOLD_TO_CUST_NUM</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SW_SBSCRPTN_ID</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">12</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">12</Property>
+               <Property Name="Derivation">to_trans.SW_SBSCRPTN_ID</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.SW_SBSCRPTN_ID</Property>
+               <Property Name="SourceColumn">to_trans.SW_SBSCRPTN_ID</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SW_SBSCRPTN_ID</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LINE_OF_BUS_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">2</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">2</Property>
+               <Property Name="Derivation">to_trans.LINE_OF_BUS_CODE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.LINE_OF_BUS_CODE</Property>
+               <Property Name="SourceColumn">to_trans.LINE_OF_BUS_CODE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">LINE_OF_BUS_CODE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">40</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">40</Property>
+               <Property Name="Derivation">to_trans.LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="SourceColumn">to_trans.LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">LINE_OF_BUS_CODE_DSCR</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SAP_CTRCT_NUM</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">to_trans.SAP_CTRCT_NUM</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.SAP_CTRCT_NUM</Property>
+               <Property Name="SourceColumn">to_trans.SAP_CTRCT_NUM</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SAP_CTRCT_NUM</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">8</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">8</Property>
+               <Property Name="Derivation">IF isnull(to_trans.ALT_SW_PROD_BRAND_CODE) then &apos;NOTFOUND&apos; else to_trans.ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">\(20)IF isnull(to_trans.ALT_SW_PROD_BRAND_CODE) then &apos;NOTFOUND&apos; else to_trans.ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="SourceColumn">to_trans.ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ALT_SW_PROD_BRAND_CODE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">12</Property>
+               <Property Name="Precision">40</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">40</Property>
+               <Property Name="Derivation">IF isnull(to_trans.ALT_SW_PROD_BRAND_CODE_DSCR) then &apos;NOTFOUND&apos; else to_trans.ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">\(20)IF isnull(to_trans.ALT_SW_PROD_BRAND_CODE_DSCR) then &apos;NOTFOUND&apos; else to_trans.ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="SourceColumn">to_trans.ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ALT_SW_PROD_BRAND_CODE_DSCR</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MNGED_ENTMT_PROG</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">5</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">5</Property>
+               <Property Name="Derivation">to_trans.MNGED_ENTMT_PROG</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.MNGED_ENTMT_PROG</Property>
+               <Property Name="SourceColumn">to_trans.MNGED_ENTMT_PROG</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MNGED_ENTMT_PROG</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ADD_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">11</Property>
+               <Property Name="Precision">26</Property>
+               <Property Name="Scale">6</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">26</Property>
+               <Property Name="Derivation">to_trans.ts</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.ts</Property>
+               <Property Name="SourceColumn">to_trans.ts</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ADD_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ADD_BY_USER_NAME</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">12</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">12</Property>
+               <Property Name="Derivation">$DSS_DB_USERNAME</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">$DSS_DB_USERNAME</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ADD_BY_USER_NAME</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MOD_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">11</Property>
+               <Property Name="Precision">26</Property>
+               <Property Name="Scale">6</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">26</Property>
+               <Property Name="Derivation">to_trans.ts</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.ts</Property>
+               <Property Name="SourceColumn">to_trans.ts</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MOD_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MOD_BY_USER_NAME</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">12</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">12</Property>
+               <Property Name="Derivation">$DSS_DB_USERNAME</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">$DSS_DB_USERNAME</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MOD_BY_USER_NAME</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">to_trans.LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">to_trans.LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">to_trans.ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">to_trans.ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ACTV_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">to_trans.FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">to_trans.FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">FUTR_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">to_trans.FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">to_trans.FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">FIXTERM_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MTHLY_LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">to_trans.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">to_trans.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ACTV_SNS_END_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">If to_trans.ACTV_SNS_SBSCRPTN_ID_QTY=0 Then &apos;&apos; Else  to_trans.ACTV_SNS_END_DATE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">\(20)If to_trans.ACTV_SNS_SBSCRPTN_ID_QTY = 0 Then &apos;&apos; Else to_trans.ACTV_SNS_END_DATE</Property>
+               <Property Name="SourceColumn">to_trans.ACTV_SNS_SBSCRPTN_ID_QTY;to_trans.ACTV_SNS_END_DATE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">ACTV_SNS_END_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FUTR_SNS_END_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">If to_trans.FUTR_SNS_SBSCRPTN_ID_QTY =0 Then &apos;&apos; Else to_trans.FUTR_SNS_END_DATE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">\(20)If to_trans.FUTR_SNS_SBSCRPTN_ID_QTY = 0 Then &apos;&apos; Else to_trans.FUTR_SNS_END_DATE</Property>
+               <Property Name="SourceColumn">to_trans.FUTR_SNS_SBSCRPTN_ID_QTY;to_trans.FUTR_SNS_END_DATE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">FUTR_SNS_END_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MAX_SNS_END_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">9</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Derivation">from_esf_sns.MAX_SNS_END_DATE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">from_esf_sns.MAX_SNS_END_DATE</Property>
+               <Property Name="SourceColumn">from_esf_sns.MAX_SNS_END_DATE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTL1.ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MAX_SNS_END_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Derivation">If IsNull(from_esf_sns.MAX_SNS_SBSCRPTN_ID_QTY) Then 0 Else from_esf_sns.MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">\(20)If IsNull(from_esf_sns.MAX_SNS_SBSCRPTN_ID_QTY) Then 0 Else from_esf_sns.MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SourceColumn">from_esf_sns.MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTL1.ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CUST_PROD_PORTFOLIO_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">8</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">8</Property>
+               <Property Name="Derivation">to_trans.CUST_PROD_PORTFOLIO_CODE</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.CUST_PROD_PORTFOLIO_CODE</Property>
+               <Property Name="SourceColumn">to_trans.CUST_PROD_PORTFOLIO_CODE</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">LES_ENTMT_STAT_CODE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">8</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">8</Property>
+               <Property Name="Derivation">If  to_trans.LIC_SBSCRPTN_ID_QTY&lt;=0 and to_trans.ACTV_SNS_SBSCRPTN_ID_QTY&lt;=0 and to_trans.FUTR_SNS_SBSCRPTN_ID_QTY&lt;=0 and to_trans.FIXTERM_SBSCRPTN_ID_QTY&lt;=0 and to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY&lt;=0 and to_trans.SAAS_SBSCRPTN_ID_QTY&lt;=0 Then &apos;INACTV&apos; Else If to_trans.LIC_SBSCRPTN_ID_QTY&gt;0 AND to_trans.ACTV_SNS_SBSCRPTN_ID_QTY&lt;=0 and to_trans.FUTR_SNS_SBSCRPTN_ID_QTY&lt;=0 and to_trans.FIXTERM_SBSCRPTN_ID_QTY&lt;=0 and to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY&lt;=0 and to_trans.SAAS_SBSCRPTN_ID_QTY&lt;=0  Then &apos;LAPSED&apos; Else If to_trans.ACTV_SNS_SBSCRPTN_ID_QTY&gt;0 or to_trans.FUTR_SNS_SBSCRPTN_ID_QTY&gt;0 or to_trans.FIXTERM_SBSCRPTN_ID_QTY&gt;0 or to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY&gt;0 or to_trans.SAAS_SBSCRPTN_ID_QTY&gt;0  Then &apos;ACTV&apos; Else &apos;N/AV&apos;</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">\(20)If to_trans.LIC_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.ACTV_SNS_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.FUTR_SNS_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.FIXTERM_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.SAAS_SBSCRPTN_ID_QTY &lt;= 0 Then &apos;INACTV&apos; Else  If to_trans.LIC_SBSCRPTN_ID_QTY &gt; 0 AND to_trans.ACTV_SNS_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.FUTR_SNS_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.FIXTERM_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY &lt;= 0 and to_trans.SAAS_SBSCRPTN_ID_QTY &lt;= 0 Then &apos;LAPSED&apos; Else  If to_trans.ACTV_SNS_SBSCRPTN_ID_QTY &gt; 0 or to_trans.FUTR_SNS_SBSCRPTN_ID_QTY &gt; 0 or to_trans.FIXTERM_SBSCRPTN_ID_QTY &gt; 0 or to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY &gt; 0 or to_trans.SAAS_SBSCRPTN_ID_QTY &gt; 0 Then &apos;ACTV&apos; Else &apos;N/AV&apos;</Property>
+               <Property Name="SourceColumn">to_trans.LIC_SBSCRPTN_ID_QTY;to_trans.ACTV_SNS_SBSCRPTN_ID_QTY;to_trans.FUTR_SNS_SBSCRPTN_ID_QTY;to_trans.FIXTERM_SBSCRPTN_ID_QTY;to_trans.MTHLY_LIC_SBSCRPTN_ID_QTY;to_trans.SAAS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MIN_SNS_Start_Date</Property>
+               <Property Name="SqlType">9</Property>
+               <Property Name="Precision">0</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">0</Property>
+               <Property Name="Derivation">to_trans.MIN_SNS_Start_Date</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="ParsedDerivation">to_trans.MIN_SNS_Start_Date</Property>
+               <Property Name="SourceColumn">to_trans.MIN_SNS_Start_Date</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="LeftTextPos">642</Property>
+         <Property Name="TopTextPos">528</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V0S3P3" Type="TrxInput" Readonly="0">
+         <Property Name="Name">to_trans</Property>
+         <Property Name="Partner">V0S0|V0S0P1</Property>
+         <Property Name="LinkType">1</Property>
+         <Property Name="MultiRow">0</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V0S3P6" Type="TrxInput" Readonly="0">
+         <Property Name="Name">from_esf_sns</Property>
+         <Property Name="Partner">V4S0|V4S0P2</Property>
+         <Property Name="LinkType">2</Property>
+         <Property Name="MultiRow">0</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V1S0" Type="CustomStage" Readonly="0">
+         <Property Name="Name">ENTL1_Entmt_Sum_Fact_Flat</Property>
+         <Property Name="NextID">4</Property>
+         <Property Name="InputPins">V1S0P3</Property>
+         <Property Name="StageType">DSDB2</Property>
+         <Property Name="AllowColumnMapping">0</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">SERVER</Property>
+               <Property Name="Value">#$DSS_DB_NAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERNAME</Property>
+               <Property Name="Value">#$DSS_DB_USERNAME#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PASSWORD</Property>
+               <Property Name="Value">HD:D1:V0=9C&gt;0?5IE9JD0K9EBMMM=0UDCU;Ok68d&gt;0QOATO8</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">ISOLATION</Property>
+               <Property Name="Value">Cursor Stability</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="NextRecordID">0</Property>
+      </Record>
+      <Record Identifier="V1S0P3" Type="CustomInput" Readonly="0">
+         <Property Name="Name">to_insert</Property>
+         <Property Name="Partner">V0S3|V0S3P2</Property>
+         <Property Name="LinkType">1</Property>
+         <Property Name="ConditionNotMet">fail</Property>
+         <Property Name="LookupFail">fail</Property>
+         <Collection Name="Properties" Type="CustomProperty">
+            <SubRecord>
+               <Property Name="Name">TARGETTABLE</Property>
+               <Property Name="Value">ENTL1.Entmt_Sum_Fact_Flat</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TRANSSIZE</Property>
+               <Property Name="Value">100</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PARRARYSIZE</Property>
+               <Property Name="Value">50</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">INPUTMODE</Property>
+               <Property Name="Value">insert</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CREATETABLE</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENCREATEDDL</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CREATEDDL</Property>
+               <Property Name="Value" PreFormatted="1">CREATE TABLE ENTL1.Entmt_Sum_Fact_Flat (
+SOLD_TO_CUST_NUM CHAR(10) NOT NULL, 
+SW_SBSCRPTN_ID CHAR(12) NOT NULL, 
+LINE_OF_BUS_CODE CHAR(2) NOT NULL, 
+LINE_OF_BUS_CODE_DSCR CHAR(40) NOT NULL, 
+SAP_CTRCT_NUM CHAR(10) NOT NULL, 
+ALT_SW_PROD_BRAND_CODE CHAR(8) NOT NULL, 
+ALT_SW_PROD_BRAND_CODE_DSCR VARCHAR(40) NOT NULL, 
+MNGED_ENTMT_PROG CHAR(5) NOT NULL, 
+ADD_DATE TIMESTAMP NOT NULL, 
+ADD_BY_USER_NAME CHAR(12) NOT NULL, 
+MOD_DATE TIMESTAMP NOT NULL, 
+MOD_BY_USER_NAME CHAR(12) NOT NULL, 
+LIC_SBSCRPTN_ID_QTY DECIMAL(15,3) NOT NULL, 
+ACTV_SNS_SBSCRPTN_ID_QTY DECIMAL(15,3) NOT NULL, 
+FUTR_SNS_SBSCRPTN_ID_QTY DECIMAL(15,3) NOT NULL, 
+FIXTERM_SBSCRPTN_ID_QTY DECIMAL(15,3) NOT NULL, 
+MTHLY_LIC_SBSCRPTN_ID_QTY DECIMAL(15,3) NOT NULL, 
+SAAS_SBSCRPTN_ID_QTY DECIMAL(15,3) NOT NULL, 
+ACTV_SNS_END_DATE CHAR(10), 
+FUTR_SNS_END_DATE CHAR(10), 
+MAX_SNS_END_DATE DATE, 
+MAX_SNS_SBSCRPTN_ID_QTY DECIMAL(15,3), 
+CUST_PROD_PORTFOLIO_CODE CHAR(8), 
+LES_ENTMT_STAT_CODE CHAR(8), 
+Earliest_Start_Date DATE
+, PRIMARY KEY (SOLD_TO_CUST_NUM, SW_SBSCRPTN_ID, LINE_OF_BUS_CODE, LINE_OF_BUS_CODE_DSCR, SAP_CTRCT_NUM, ALT_SW_PROD_BRAND_CODE, ALT_SW_PROD_BRAND_CODE_DSCR, MNGED_ENTMT_PROG) )
+</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">TABLESPACE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">PARTKEY</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DROPTABLE</Property>
+               <Property Name="Value">No</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENDROPDDL</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">DROPDDL</Property>
+               <Property Name="Value">DROP TABLE ENTL1.Entmt_Sum_Fact_Flat</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SQLBUILDERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">FULLYGENSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">USERSQL</Property>
+               <Property Name="Value">INSERT INTO ENTL1.Entmt_Sum_Fact_Flat (SOLD_TO_CUST_NUM,SW_SBSCRPTN_ID,LINE_OF_BUS_CODE,LINE_OF_BUS_CODE_DSCR,SAP_CTRCT_NUM,ALT_SW_PROD_BRAND_CODE,ALT_SW_PROD_BRAND_CODE_DSCR,MNGED_ENTMT_PROG,ADD_DATE,ADD_BY_USER_NAME,MOD_DATE,MOD_BY_USER_NAME,LIC_SBSCRPTN_ID_QTY,ACTV_SNS_SBSCRPTN_ID_QTY,FUTR_SNS_SBSCRPTN_ID_QTY,FIXTERM_SBSCRPTN_ID_QTY,MTHLY_LIC_SBSCRPTN_ID_QTY,SAAS_SBSCRPTN_ID_QTY,ACTV_SNS_END_DATE,FUTR_SNS_END_DATE,MAX_SNS_END_DATE,MAX_SNS_SBSCRPTN_ID_QTY,CUST_PROD_PORTFOLIO_CODE,LES_ENTMT_STAT_CODE,Earliest_Start_Date) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">BEFORESQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTBEFORESQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">AFTERSQL</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">CONTAFTERSQL</Property>
+               <Property Name="Value">YES</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">GENSQL</Property>
+               <Property Name="Value">Yes</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="TransactionSize">0</Property>
+         <Property Name="TXNBehaviour">0</Property>
+         <Property Name="EnableTxGroup">0</Property>
+         <Property Name="LinkMinimised">0</Property>
+      </Record>
+      <Record Identifier="V4S0" Type="HashedFileStage" Readonly="0">
+         <Property Name="Name">Hashed_File</Property>
+         <Property Name="NextID">3</Property>
+         <Property Name="OutputPins">V4S0P2</Property>
+         <Property Name="UVcompatible">0</Property>
+         <Property Name="SQLNull">0</Property>
+         <Property Name="StageType">CHashedFileStage</Property>
+      </Record>
+      <Record Identifier="V4S0P2" Type="HashedOutput" Readonly="0">
+         <Property Name="Name">from_esf_sns</Property>
+         <Property Name="Partner">V0S3|V0S3P6</Property>
+         <Property Name="FileName">from_esf_sns_hash</Property>
+         <Property Name="InMemory">0</Property>
+         <Property Name="Normalize">Un-Normalized</Property>
+         <Property Name="LeftTextPos">389</Property>
+         <Property Name="TopTextPos">402</Property>
+         <Property Name="RecordLevelRead">0</Property>
+         <Collection Name="Columns" Type="OutputColumn">
+            <SubRecord>
+               <Property Name="Name">SOLD_TO_CUST_NUM</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="KeyExpression">to_trans.SOLD_TO_CUST_NUM</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SOLD_TO_CUST_NUM</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyParsedDerivation">to_trans.SOLD_TO_CUST_NUM</Property>
+               <Property Name="PKeySourceColumn">to_trans.SOLD_TO_CUST_NUM</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SW_SBSCRPTN_ID</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">12</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">12</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="KeyExpression">to_trans.SW_SBSCRPTN_ID</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SW_SBSCRPTN_ID</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyParsedDerivation">to_trans.SW_SBSCRPTN_ID</Property>
+               <Property Name="PKeySourceColumn">to_trans.SW_SBSCRPTN_ID</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">SAP_CTRCT_NUM</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="KeyExpression">to_trans.SAP_CTRCT_NUM</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">SAP_CTRCT_NUM</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyParsedDerivation">to_trans.SAP_CTRCT_NUM</Property>
+               <Property Name="PKeySourceColumn">to_trans.SAP_CTRCT_NUM</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MNGED_ENTMT_PROG</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">1</Property>
+               <Property Name="Precision">5</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">0</Property>
+               <Property Name="KeyPosition">1</Property>
+               <Property Name="DisplaySize">5</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="KeyExpression">to_trans.MNGED_ENTMT_PROG</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MNGED_ENTMT_PROG</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyParsedDerivation">to_trans.MNGED_ENTMT_PROG</Property>
+               <Property Name="PKeySourceColumn">to_trans.MNGED_ENTMT_PROG</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MAX_SNS_END_DATE</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">9</Property>
+               <Property Name="Precision">10</Property>
+               <Property Name="Scale">0</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">10</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTL1.ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MAX_SNS_END_DATE</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="Description">&lt;none&gt;</Property>
+               <Property Name="SqlType">3</Property>
+               <Property Name="Precision">15</Property>
+               <Property Name="Scale">3</Property>
+               <Property Name="Nullable">1</Property>
+               <Property Name="KeyPosition">0</Property>
+               <Property Name="DisplaySize">17</Property>
+               <Property Name="Group">0</Property>
+               <Property Name="SortKey">0</Property>
+               <Property Name="SortType">0</Property>
+               <Property Name="TableDef">PlugIn\DSDB2\ENTL1.ENTMT_SUM_FACT_FLAT</Property>
+               <Property Name="AllowCRLF">0</Property>
+               <Property Name="LevelNo">0</Property>
+               <Property Name="Occurs">0</Property>
+               <Property Name="PadNulls">0</Property>
+               <Property Name="SignOption">0</Property>
+               <Property Name="SortingOrder">0</Property>
+               <Property Name="ArrayHandling">0</Property>
+               <Property Name="SyncIndicator">0</Property>
+               <Property Name="PadChar"/>
+               <Property Name="ColumnReference">MAX_SNS_SBSCRPTN_ID_QTY</Property>
+               <Property Name="ExtendedPrecision">0</Property>
+               <Property Name="TaggedSubrec">0</Property>
+               <Property Name="OccursVarying">0</Property>
+               <Property Name="PKeyIsCaseless">0</Property>
+               <Property Name="SCDPurpose">0</Property>
+            </SubRecord>
+         </Collection>
+      </Record>
+   </Job>
+</DSExport>
