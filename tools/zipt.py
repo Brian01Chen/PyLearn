@@ -9,7 +9,8 @@ def combinations(iterable, r):
     yield tuple(pool[i] for i in indices)
     while True:
         for i in reversed(range(r)):
-            if indices[i] != i + n - r: #i+n-r = n-(r-i) 表示到达边界
+            if indices[i] != i + n - r:
+                # i+n-r = n-(r-i) 表示到达边界
                 break
         else:
             return 
@@ -17,6 +18,8 @@ def combinations(iterable, r):
         for j in range(i+1, r):
             indices[j] = indices[j-1] + 1
         yield tuple(pool[i] for i in indices)
+
+
 def permutation(iterable, r):
     # permutation('ABCD', 2) --> AB AC AD BA BC BD CA CB CD DA DB DC
     pool = tuple(iterable)

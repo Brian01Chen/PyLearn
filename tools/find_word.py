@@ -6,7 +6,7 @@ def get_sublists(path):
     if os.path.exists(path) and not os.path.isfile(path):
         sublists = os.listdir(path)
         base = os.getcwd()
-        yield from [os.path.join(base,x) for x in sublists]
+        yield from [os.path.join(path, x) for x in sublists]
     else:
         yield path
     
