@@ -1,0 +1,367 @@
+Event Id: 13753 Time    : Wed Apr 19 07:39:05 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Batch::SNS_DTL_SUM_Fact.
+        $DSS_DB_NAME = DSSPAGE  $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_PASSWD = ********       $FROM_EMAIL = dsadm@b01aciapp071.ahe.pok.ibm.com
+        $TO_EMAIL = ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com     $SYS_CODE = P
+        $APP_NAME = DSS         SNAPSHOT_WK_DIMNSN_ID = 20170203
+        REFRESH_FLAG = N        $HRCL_NAME = dss_oper
+        $DSW_IN_DIR = /opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/       $DSW_SQL_DIR = /opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/
+        SNS_VALIDATE_SQL_FILE = DEFAULT         DSJobController = Batch::SNS_Process
+Event Id: 13754 Time    : Wed Apr 19 07:39:05 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/opt/IBM/InformationServer/Server/DSEngine/bin/uvsh   APP_NAME=DSS
+        APT_COMPILEOPT=-O -q64 -c       APT_COMPILER=/usr/vacpp/bin/xlC_r
+        APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt      APT_LINKER=/usr/vacpp/bin/xlC_r
+        APT_LINKOPT=-G -q64     APT_MONITOR_MINTIME=10
+        APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1        APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine
+        APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020        APT_STRING_PADCHAR=0x20
+        ASBHOME=/opt/IBM/InformationServer/ASBNode      AUTHSTATE=compat
+        BELL=^G         BLU_DB_NAME=DSSPANDA
+        BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5     BLU_DB_USERNAME=dss_oper
+        CLCMD_PASSTHRU=1        CLUSTER_OVERRIDE=yes
+        COGNOS_ACCOUNT_NAME=ygarsana    COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com
+        DB2_PRT_DIR=db2page/dwdm/RMS/   DB2DIR=/db2_src/db2inst1/sqllib/bin
+        DB2INSTANCE=db2inst1    DODS_NAME=$PROJDEF (Replace with required value)
+        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K        DODS_USERNAME=$PROJDEF (Replace with required value)
+        DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success       DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone
+        DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone       DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone
+        DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone   DS_ENABLE_RESERVED_CHAR_CONVERT=0
+        DS_HOSTNAME_ALIAS=b01aciappha020        DS_NO_PROCESS_METADATA=1
+        DS_OPERATOR_BUILDOP_DIR=buildop         DS_OPERATOR_WRAPPED_DIR=wrapped
+        DS_OPTIMIZE_FILE_BROWSE=0       DS_TDM_PIPE_OPEN_TIMEOUT=720
+        DS_TDM_TRACE_SUBROUTINE_CALLS=0         DS_USERNO=-1836
+        DSE_PID_SIGNATURE=1     DSHOME=/opt/IBM/InformationServer/Server/DSEngine
+        DSIPC_OPEN_TIMEOUT=30   DSRPCD_PORT_NUMBER=31538
+        DSS_DB_NAME=DSSPAGE     DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        DSS_DB_USERNAME=dss_oper        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/
+        DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output   DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/
+        DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/       DSWaitResetStartup=90
+        DSWaitStartup=90        EDITOR=vi
+        FLAVOR=-1       FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        HISTSIZE=500    HOME=/home/dsadm
+        HRCL_NAME=dss_oper      INSTHOME=/db2_src/db2inst1
+        LANG=en_US      LC__FASTMSG=true
+        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64        LDR_CNTRL=USERREGS
+        LIBPATH=/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64::/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64       LOCPATH=/usr/lib/nls/loc
+        LOGIN=dsadm     LOGNAME=dsadm
+        MANPATH=/usr/man        MIGRATE_CONTINUE_ON_ERROR=1
+        NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat       NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine
+        ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini    ODMDIR=/etc/objrepos
+        ODS_DB_NAME=ODSP        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        ODS_DB_USERNAME=dss_oper        PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin
+        PWD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse    PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=dumb
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=dsadm
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 13755 Time    : Wed Apr 19 07:39:06 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact: Set NLS locale to US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 13756 Time    : Wed Apr 19 07:39:06 2017
+Type    : BATCH User    : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact -> (Batch::Populate_Target_Track_PCT): Job run requested
+        Mode (row/warn limits) = 0/50   Job Parameters --->
+        $DSS_DB_NAME=DSSPAGE    $DSS_DB_USERNAME=dss_oper
+        $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5         $HRCL_NAME=dss_oper
+        REFRESH_FLAG=N  SNAPSHOT_WK_DIMNSN_ID=20170203
+        $APP_NAME=DSS   $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com  $SYS_CODE=P
+        DSJobController=Batch::SNS_DTL_SUM_Fact 
+Event Id: 13757
+Time    : Wed Apr 19 07:39:06 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Populate_Target_Track_PCT to start 
+Event Id: 13758
+Time    : Wed Apr 19 07:39:07 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Populate_Target_Track_PCT to finish 
+Event Id: 13759
+Time    : Wed Apr 19 07:42:21 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Populate_Target_Track_PCT has finished, status = 1 (Finished OK) 
+Event Id: 13760
+Time    : Wed Apr 19 07:42:21 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (@Populate_Target_Track_PCT): Report on job: Batch::Populate_Target_Track_PCT
+ STATUS REPORT FOR JOB: Batch::Populate_Target_Track_PCT
+    Job start time=2017-04-19 07:39:06
+    Job elapsed time=00:03:14:42:20
+    Job has no stages.hed OK)
+Event Id: 13761 Time    : Wed Apr 19 07:42:21 2017
+Type    : BATCH User    : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact -> (Batch::Data_Validation): Job run requested
+        Mode (row/warn limits) = 0/50   Job Parameters --->
+        $DSS_DB_NAME=DSSPAGE    $DSS_DB_USERNAME=dss_oper
+        $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5         $DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        $DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/      SQL_Files=RENWL_track_pct_validations.sqls
+        $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com  $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        $SYS_CODE=P     $APP_NAME=DSS
+        DSJobController=Batch::SNS_DTL_SUM_Fact 
+Event Id: 13762
+Time    : Wed Apr 19 07:42:21 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Data_Validation to start 
+Event Id: 13763
+Time    : Wed Apr 19 07:42:22 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Data_Validation to finish 
+Event Id: 13764
+Time    : Wed Apr 19 07:43:22 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Data_Validation has finished, status = 1 (Finished OK) 
+Event Id: 13765
+Time    : Wed Apr 19 07:43:22 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (@RENWL_track_pct_validations): Report on job: Batch::Data_Validation
+ STATUS REPORT FOR JOB: Batch::Data_Validation****
+    Job start time=2017-04-19 07:42:22
+    Job elapsed time=00:00:59:43:21
+    Job has no stages.hed OK)
+Event Id: 13766 Time    : Wed Apr 19 07:43:22 2017
+Type    : BATCH User    : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact -> (Batch::Load_Maintnc_Expird_Renwd_Fact): Job run requested
+        Mode (row/warn limits) = 0/50   Job Parameters --->
+        $DSS_DB_NAME=DSSPAGE    $DSS_DB_USERNAME=dss_oper
+        $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5         $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com       $SYS_CODE=P
+        $APP_NAME=DSS   SNAPSHOT_WK_DIMNSN_ID=20170203
+        DSJobController=Batch::SNS_DTL_SUM_Fact 
+Event Id: 13767
+Time    : Wed Apr 19 07:43:22 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Load_Maintnc_Expird_Renwd_Fact to start 
+Event Id: 13768
+Time    : Wed Apr 19 07:43:24 2017 Type : BATCH
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact -> (Batch::Load_Maintnc_Expird_Renwd_Qty): Job run requested    Mode (row/warn limits) = 0/50
+        Job Parameters --->     $DSS_DB_NAME=DSSPAGE
+        $DSS_DB_USERNAME=dss_oper       $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        SNAPSHOT_WK_DIMNSN_ID=20170203  $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com       $SYS_CODE=P
+        $APP_NAME=DSS   $HRCL_NAME=dss_oper
+        DSJobController=Batch::SNS_DTL_SUM_Fact 
+Event Id: 13769
+Time    : Wed Apr 19 07:43:24 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Load_Maintnc_Expird_Renwd_Qty to start 
+Event Id: 13770
+Time    : Wed Apr 19 07:43:25 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Load_Maintnc_Expird_Renwd_Fact+Batch::Load_Maintnc_Expird_Renwd_Qty to finish 
+Event Id: 13771
+Time    : Wed Apr 19 11:17:52 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Load_Maintnc_Expird_Renwd_Fact has finished, status = 1 (Finished OK) 
+Event Id: 13772
+Time    : Wed Apr 19 11:17:52 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (@Batch_Load_Expird_Renwed_Fact): Report on job: Batch::Load_Maintnc_Expird_Renwd_Fact
+ STATUS REPORT FOR JOB: Batch::Load_Maintnc_Expird_Renwd_Fact
+    Job start time=2017-04-19 07:43:23
+    Job elapsed time=03:34:28:17:51
+    Job has no stages.hed OK)
+Event Id: 13773 Time    : Wed Apr 19 11:17:52 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Load_Maintnc_Expird_Renwd_Qty to finish
+Event Id: 13774 Time    : Wed Apr 19 14:32:42 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Load_Maintnc_Expird_Renwd_Qty has finished, status = 1 (Finished OK)
+Event Id: 13775 Time    : Wed Apr 19 14:32:42 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (@Load_VRR_DTL): Report on job: Batch::Load_Maintnc_Expird_Renwd_Qty
+ **************************************************
+ Generated: 2017-04-19 14:32:42oad_Maintnc_Expird_Renwd_Qty
+    Job end time=2017-04-19 14:32:414
+    Job status=1 (Finished OK)
+   Job has no stages. 
+Event Id: 13776
+Time    : Wed Apr 19 14:32:42 2017 Type : BATCH
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact -> (Populate_Client_Dimnsn): Job run requested  Mode (row/warn limits) = 0/50
+        Job Parameters --->     $DSS_DB_NAME=DSSPAGE
+        $DSS_DB_USERNAME=dss_oper       $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        $HRCL_NAME=dss_oper     Refresh_Dimnsn_Flag=N
+        DSJobController=Batch::SNS_DTL_SUM_Fact 
+Event Id: 13777
+Time    : Wed Apr 19 14:32:42 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Populate_Client_Dimnsn to start 
+Event Id: 13778
+Time    : Wed Apr 19 14:32:43 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Populate_Client_Dimnsn to finish 
+Event Id: 13779
+Time    : Wed Apr 19 14:34:17 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Populate_Client_Dimnsn has finished, status = 1 (Finished OK) 
+Event Id: 13780
+Time    : Wed Apr 19 14:34:17 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (@Populate_Client_Dimnsn): Report on job: Populate_Client_Dimnsn
+ STATUS REPORT FOR JOB: Populate_Client_Dimnsn****
+    Job start time=2017-04-19 14:32:43
+    Job elapsed time=00:01:33:34:16
+       Stage: src, 252039 rows input
+          Link: src, 252039 rows9 14:34:09, end time=2017-04-19 14:34:12, elapsed=00:00:03
+       Stage start time=2017-04-19 14:34:09, end time=2017-04-19 14:34:14, elapsed=00:00:05
+       Stage: Change_Capture, 839028 rows input
+          Link: tgt, 586989 rows9 14:32:45, end time=2017-04-19 14:34:16, elapsed=00:01:31
+          Link: out, 334950 rows
+       Stage start time=2017-04-19 14:32:45, end time=2017-04-19 14:34:16, elapsed=00:01:31
+          Link: update, 0 rowss
+          Link: delete, 0 rows
+       Stage start time=2017-04-19 14:34:16, end time=2017-04-19 14:34:16, elapsed=00:00:00
+       Stage: Client_Dimnsn_Insert, 0 rows input
+          Link: insert, 0 rows-19 14:34:16, end time=2017-04-19 14:34:16, elapsed=00:00:00
+       Stage start time=2017-04-19 14:34:16, end time=2017-04-19 14:34:16, elapsed=00:00:00
+         Link: delete, 0 rows 
+Event Id: 13781
+Time    : Wed Apr 19 14:34:17 2017 Type : BATCH
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact -> (Batch::Data_Validation): Job run requested  Mode (row/warn limits) = 0/50
+        Job Parameters --->     $DSS_DB_NAME=DSSPAGE
+        $DSS_DB_USERNAME=dss_oper       $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        $DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/         $DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/
+        SQL_Files=dimnsn_validation.sqls        $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com       $SYS_CODE=P
+        $APP_NAME=DSS   DSJobController=Batch::SNS_DTL_SUM_Fact
+Event Id: 13782 Time    : Wed Apr 19 14:34:17 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Data_Validation to start
+Event Id: 13783 Time    : Wed Apr 19 14:34:18 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Data_Validation to finish
+Event Id: 13784 Time    : Wed Apr 19 14:48:22 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Data_Validation has finished, status = 1 (Finished OK)
+Event Id: 13785 Time    : Wed Apr 19 14:48:22 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (@Dimension_Validation): Report on job: Batch::Data_Validation
+ **************************************************
+ Generated: 2017-04-19 14:48:22ata_Validation
+    Job end time=2017-04-19 14:48:218
+    Job status=1 (Finished OK)
+   Job has no stages. 
+Event Id: 13786
+Time    : Wed Apr 19 14:48:22 2017 Type : BATCH
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact -> (Batch::Load_Renwls_Trgt_Sum_Fact): Job run requested        Mode (row/warn limits) = 0/50
+        Job Parameters --->     $DSS_DB_NAME=DSSPAGE
+        $DSS_DB_USERNAME=dss_oper       $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        SNAPSHOT_WK_DIMNSN_ID=20170203  Refresh_Table_Flag=N
+        $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com  $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        $SYS_CODE=P     $APP_NAME=DSS
+        $HRCL_NAME=dss_oper     DSJobController=Batch::SNS_DTL_SUM_Fact
+Event Id: 13787 Time    : Wed Apr 19 14:48:22 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Load_Renwls_Trgt_Sum_Fact to start
+Event Id: 13788 Time    : Wed Apr 19 14:48:23 2017
+Type    : BATCH User    : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact -> (Batch::Load_SNS_Sum_Fact): Job run requested
+        Mode (row/warn limits) = 0/50   Job Parameters --->
+        $DSS_DB_NAME=DSSPAGE    $DSS_DB_USERNAME=dss_oper
+        $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5         SNAPSHOT_WK_DIMNSN_ID=20170203
+        Refresh_Table_Flag=N    $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com       $SYS_CODE=P
+        $APP_NAME=DSS   $HRCL_NAME=dss_oper
+        DSJobController=Batch::SNS_DTL_SUM_Fact 
+Event Id: 13789
+Time    : Wed Apr 19 14:48:23 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Load_SNS_Sum_Fact to start 
+Event Id: 13790
+Time    : Wed Apr 19 14:48:24 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Load_Renwls_Trgt_Sum_Fact+Batch::Load_SNS_Sum_Fact to finish 
+Event Id: 13791
+Time    : Wed Apr 19 14:52:41 2017 Type : INFO
+User    : dsadm 
+Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Load_SNS_Sum_Fact has finished, status = 1 (Finished OK) 
+Event Id: 13792
+Time    : Wed Apr 19 14:52:41 2017 Type : INFO
+User    : dsadm 
+Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (@Batch_Load_SNS_Sum_Fact): Report on job: Batch::Load_SNS_Sum_Fact
+ STATUS REPORT FOR JOB: Batch::Load_SNS_Sum_Fact**
+    Job start time=2017-04-19 14:48:23
+    Job elapsed time=00:04:17:52:40
+    Job has no stages.hed OK)
+Event Id: 13793 Time    : Wed Apr 19 14:52:41 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Load_Renwls_Trgt_Sum_Fact to finish
+Event Id: 13794 Time    : Wed Apr 19 15:40:46 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Load_Renwls_Trgt_Sum_Fact has finished, status = 1 (Finished OK)
+Event Id: 13795 Time    : Wed Apr 19 15:40:46 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (@Batch_Load_Renwls_Trgt_Sum_Fact): Report on job: Batch::Load_Renwls_Trgt_Sum_Fact
+ **************************************************
+ Generated: 2017-04-19 15:40:46oad_Renwls_Trgt_Sum_Fact
+    Job end time=2017-04-19 15:40:452
+    Job status=1 (Finished OK)
+   Job has no stages. 
+Event Id: 13796
+Time    : Wed Apr 19 15:40:46 2017 
+Type : BATCH
+User    : dsadm 
+Message :
+        Batch::SNS_DTL_SUM_Fact -> (Batch::Data_Validation): Job run requested  Mode (row/warn limits) = 0/50
+        Job Parameters --->     $DSS_DB_NAME=DSSPAGE
+        $DSS_DB_USERNAME=dss_oper       $DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        $DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/         $DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/
+        SQL_Files=sns_validation.sqls   $FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        $TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com       $SYS_CODE=P
+        $APP_NAME=DSS   DSJobController=Batch::SNS_DTL_SUM_Fact
+Event Id: 13797 Time    : Wed Apr 19 15:40:46 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSRunJob): Waiting for job Batch::Data_Validation to start
+Event Id: 13798 Time    : Wed Apr 19 15:40:47 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Waiting for job Batch::Data_Validation to finish
+Event Id: 13799 Time    : Wed Apr 19 15:51:01 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (DSWaitForJob): Job Batch::Data_Validation has finished, status = 1 (Finished OK)
+Event Id: 13800 Time    : Wed Apr 19 15:51:01 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (@Batch_Data_Validation): Report on job: Batch::Data_Validation
+ **************************************************
+ Generated: 2017-04-19 15:51:01ata_Validation
+    Job end time=2017-04-19 15:50:597
+    Job status=1 (Finished OK)
+   Job has no stages. 
+Event Id: 13801
+Time    : Wed Apr 19 15:51:01 2017 Type : INFO
+User    : dsadm Message :
+        Batch::SNS_DTL_SUM_Fact..JobControl (DSSendMail): Sent message to 'ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com'     Executed command: /opt/IBM/InformationServer/Server/Projects/DataWarehouse/sendmail_Batch::SNS_DTL_SUM_Fact_57061246.2729_25428252.sh
+        *** No output from command ***  The following parameters in the call to DSSendMail were not mentioned in the file 'dssendmail_template.txt': server
+Event Id: 13802 Time    : Wed Apr 19 15:51:01 2017
+Type    : INFO User     : dsadm
+Message :       Batch::SNS_DTL_SUM_Fact..JobControl (@Coordinator): Summary of sequence run
+        07:39:06: Sequence started      07:39:06: Populate_Target_Track_PCT (JOB Batch::Populate_Target_Track_PCT) started
+        07:42:21: Populate_Target_Track_PCT (JOB Batch::Populate_Target_Track_PCT) finished, status=1 [Finished OK]     07:42:21: RENWL_track_pct_validations (JOB Batch::Data_Validation) started
+        07:43:22: RENWL_track_pct_validations (JOB Batch::Data_Validation) finished, status=1 [Finished OK]     07:43:22: Batch_Load_Expird_Renwed_Fact (JOB Batch::Load_Maintnc_Expird_Renwd_Fact) started
+        07:43:23: Load_VRR_DTL (JOB Batch::Load_Maintnc_Expird_Renwd_Qty) started       11:17:52: Batch_Load_Expird_Renwed_Fact (JOB Batch::Load_Maintnc_Expird_Renwd_Fact) finished, status=1 [Finished OK]
+        14:32:42: Load_VRR_DTL (JOB Batch::Load_Maintnc_Expird_Renwd_Qty) finished, status=1 [Finished OK]      14:32:42: Populate_Client_Dimnsn (JOB Populate_Client_Dimnsn) started
+        14:34:17: Populate_Client_Dimnsn (JOB Populate_Client_Dimnsn) finished, status=1 [Finished OK]  14:34:17: Dimension_Validation (JOB Batch::Data_Validation) started
+        14:48:22: Dimension_Validation (JOB Batch::Data_Validation) finished, status=1 [Finished OK]    14:48:22: Batch_Load_Renwls_Trgt_Sum_Fact (JOB Batch::Load_Renwls_Trgt_Sum_Fact) started
+        14:48:23: Batch_Load_SNS_Sum_Fact (JOB Batch::Load_SNS_Sum_Fact) started        14:52:41: Batch_Load_SNS_Sum_Fact (JOB Batch::Load_SNS_Sum_Fact) finished, status=1 [Finished OK]
+        15:40:46: Batch_Load_Renwls_Trgt_Sum_Fact (JOB Batch::Load_Renwls_Trgt_Sum_Fact) finished, status=1 [Finished OK]       15:40:46: Batch_Data_Validation (JOB Batch::Data_Validation) started
+        15:51:01: Batch_Data_Validation (JOB Batch::Data_Validation) finished, status=1 [Finished OK]   15:51:01: Batch_successful (ROUTINE DSSendMail) started
+        15:51:01: Batch_successful finished, reply=0    15:51:01: Sequence finished OK
+Event Id: 13803 Time    : Wed Apr 19 15:51:01 2017
+Type    : STARTED User  : dsadm
+Message :       Finished Job Batch::SNS_DTL_SUM_Fact.
+Event Id: 13804 Time    : Wed Apr 19 15:51:01 2017
+Type    : BATCH User    : dsadm
+Message :       (Batch::SNS_Process) <- Batch::SNS_DTL_SUM_Fact: Job under control finished.

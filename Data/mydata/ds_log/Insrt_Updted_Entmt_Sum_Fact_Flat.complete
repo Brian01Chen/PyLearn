@@ -1,0 +1,490 @@
+Event Id: 939868 Time   : Mon Jun 19 20:04:00 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+        $DSS_DB_NAME = DSSPAGE  $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_PASSWD = ********       LAST_ESF_TS = 2017-06-19 19:31:27.386584
+        CUR_ESF_TS = 2017-06-19 20:01:48.092600         DSJobController = Batch::Load_Entmt_Sum_Fact_Flat_Incr
+Event Id: 939869 Time   : Mon Jun 19 20:04:00 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/usr/bin/nohup        A__z=! LOGNAME
+        APP_NAME=DSS    APT_COMPILEOPT=-O -q64 -c
+        APT_COMPILER=/usr/vacpp/bin/xlC_r       APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt
+        APT_LINKER=/usr/vacpp/bin/xlC_r         APT_LINKOPT=-G -q64
+        APT_MONITOR_MINTIME=10  APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1
+        APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine         APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020
+        APT_STRING_PADCHAR=0x20         ASBHOME=/opt/IBM/InformationServer/ASBNode
+        AUTHSTATE=files         BELL=^G
+        BLU_DB_NAME=DSSPANDA    BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5
+        BLU_DB_USERNAME=dss_oper        CLCMD_PASSTHRU=1
+        CLUSTER_OVERRIDE=yes    COGNOS_ACCOUNT_NAME=ygarsana
+        COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com    DB2_PRT_DIR=db2page/dwdm/RMS/
+        DB2DIR=/db2_src/db2inst1/sqllib/bin     DB2INSTANCE=db2inst1
+        DODS_NAME=$PROJDEF (Replace with required value)        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K
+        DODS_USERNAME=$PROJDEF (Replace with required value)    DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success
+        DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone       DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone
+        DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone         DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone
+        DS_ENABLE_RESERVED_CHAR_CONVERT=0       DS_HOSTNAME_ALIAS=b01aciappha020
+        DS_NO_PROCESS_METADATA=1        DS_OPERATOR_BUILDOP_DIR=buildop
+        DS_OPERATOR_WRAPPED_DIR=wrapped         DS_OPTIMIZE_FILE_BROWSE=0
+        DS_TDM_PIPE_OPEN_TIMEOUT=720    DS_TDM_TRACE_SUBROUTINE_CALLS=0
+        DS_USERNO=-576  DSHOME=/opt/IBM/InformationServer/Server/DSEngine
+        DSIPC_OPEN_TIMEOUT=30   DSRPCD_PORT_NUMBER=31538
+        DSS_DB_NAME=DSSPAGE     DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        DSS_DB_USERNAME=dss_oper        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/
+        DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output   DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/
+        DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/       DSWaitResetStartup=90
+        DSWaitStartup=90        EDITOR=vi
+        FLAVOR=-1       FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        HISTFILE=/var/log/.hist.thdowdle.as.root        HISTSIZE=500
+        HOME=/  HRCL_NAME=dss_oper
+        INSTHOME=/db2_src/db2inst1      ISFSHMID=657457444
+        ISUSER=ruth     LANG=en_US
+        LC__FASTMSG=true        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64
+        LDR_CNTRL=USERREGS      LIBPATH=/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64::/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64
+        LOCPATH=/usr/lib/nls/loc        LOGIN=dsadm
+        LOGNAME=dsadm   MAIL=/usr/spool/mail/root
+        MAILMSG=[YOU HAVE NEW MAIL]     MANPATH=/usr/man
+        MIGRATE_CONTINUE_ON_ERROR=1     NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat
+        NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine     ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini
+        ODMDIR=/etc/objrepos    ODS_DB_NAME=ODSP
+        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  ODS_DB_USERNAME=dss_oper
+        PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin      PIDTOK=2884042
+        PS1=[b01aciapp071:$PWD]         PWD=/opt/IBM/InformationServer/Server/DSEngine
+        PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents         REAL_USER=thdowdle
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/usr/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=root
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 939870 Time   : Mon Jun 19 20:04:01 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat: Set NLS locale to US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939871 Time   : Mon Jun 19 20:04:01 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage starting, tracemode = 0.
+Event Id: 939872 Time   : Mon Jun 19 20:04:01 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: NLS stage locale is US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939873 Time   : Mon Jun 19 20:04:02 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact: Using NLS map ISO8859-1
+Event Id: 939874 Time   : Mon Jun 19 20:05:16 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Using NLS map ISO8859-1
+Event Id: 939875 Time   : Mon Jun 19 20:05:16 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Transaction committed as part of link close processing.
+Event Id: 939876 Time   : Mon Jun 19 20:05:16 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: Stage statistics
+        14 rows read from to_trans      14 rows read from from_esf_sns
+        14 rows written to to_insert    0.010 CPU seconds used, 0.304 seconds elapsed.
+Event Id: 939877 Time   : Mon Jun 19 20:05:16 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage finishing.
+Event Id: 939878 Time   : Mon Jun 19 20:05:16 2017
+Type    : STARTED User  : dsadm
+Message :       Finished Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+Event Id: 939879 Time   : Mon Jun 19 20:05:16 2017
+Type    : BATCH User    : dsadm
+Message :       (Batch::Load_Entmt_Sum_Fact_Flat_Incr) <- Insrt_Updted_Entmt_Sum_Fact_Flat: Job under control finished.
+Event Id: 939880 Time   : Mon Jun 19 20:18:47 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+        $DSS_DB_NAME = DSSPAGE  $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_PASSWD = ********       LAST_ESF_TS = 2017-06-19 20:01:48.092600
+        CUR_ESF_TS = 2017-06-19 20:16:27.996775         DSJobController = Batch::Load_Entmt_Sum_Fact_Flat_Incr
+Event Id: 939881 Time   : Mon Jun 19 20:18:47 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/usr/bin/nohup        A__z=! LOGNAME
+        APP_NAME=DSS    APT_COMPILEOPT=-O -q64 -c
+        APT_COMPILER=/usr/vacpp/bin/xlC_r       APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt
+        APT_LINKER=/usr/vacpp/bin/xlC_r         APT_LINKOPT=-G -q64
+        APT_MONITOR_MINTIME=10  APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1
+        APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine         APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020
+        APT_STRING_PADCHAR=0x20         ASBHOME=/opt/IBM/InformationServer/ASBNode
+        AUTHSTATE=files         BELL=^G
+        BLU_DB_NAME=DSSPANDA    BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5
+        BLU_DB_USERNAME=dss_oper        CLCMD_PASSTHRU=1
+        CLUSTER_OVERRIDE=yes    COGNOS_ACCOUNT_NAME=ygarsana
+        COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com    DB2_PRT_DIR=db2page/dwdm/RMS/
+        DB2DIR=/db2_src/db2inst1/sqllib/bin     DB2INSTANCE=db2inst1
+        DODS_NAME=$PROJDEF (Replace with required value)        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K
+        DODS_USERNAME=$PROJDEF (Replace with required value)    DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success
+        DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone       DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone
+        DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone         DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone
+        DS_ENABLE_RESERVED_CHAR_CONVERT=0       DS_HOSTNAME_ALIAS=b01aciappha020
+        DS_NO_PROCESS_METADATA=1        DS_OPERATOR_BUILDOP_DIR=buildop
+        DS_OPERATOR_WRAPPED_DIR=wrapped         DS_OPTIMIZE_FILE_BROWSE=0
+        DS_TDM_PIPE_OPEN_TIMEOUT=720    DS_TDM_TRACE_SUBROUTINE_CALLS=0
+        DS_USERNO=-838  DSHOME=/opt/IBM/InformationServer/Server/DSEngine
+        DSIPC_OPEN_TIMEOUT=30   DSRPCD_PORT_NUMBER=31538
+        DSS_DB_NAME=DSSPAGE     DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        DSS_DB_USERNAME=dss_oper        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/
+        DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output   DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/
+        DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/       DSWaitResetStartup=90
+        DSWaitStartup=90        EDITOR=vi
+        FLAVOR=-1       FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        HISTFILE=/var/log/.hist.thdowdle.as.root        HISTSIZE=500
+        HOME=/  HRCL_NAME=dss_oper
+        INSTHOME=/db2_src/db2inst1      ISFSHMID=657457444
+        ISUSER=ruth     LANG=en_US
+        LC__FASTMSG=true        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64
+        LDR_CNTRL=USERREGS      LIBPATH=/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64::/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64
+        LOCPATH=/usr/lib/nls/loc        LOGIN=dsadm
+        LOGNAME=dsadm   MAIL=/usr/spool/mail/root
+        MAILMSG=[YOU HAVE NEW MAIL]     MANPATH=/usr/man
+        MIGRATE_CONTINUE_ON_ERROR=1     NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat
+        NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine     ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini
+        ODMDIR=/etc/objrepos    ODS_DB_NAME=ODSP
+        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  ODS_DB_USERNAME=dss_oper
+        PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin      PIDTOK=2884042
+        PS1=[b01aciapp071:$PWD]         PWD=/opt/IBM/InformationServer/Server/DSEngine
+        PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents         REAL_USER=thdowdle
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/usr/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=root
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 939882 Time   : Mon Jun 19 20:18:48 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat: Set NLS locale to US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939883 Time   : Mon Jun 19 20:18:48 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage starting, tracemode = 0.
+Event Id: 939884 Time   : Mon Jun 19 20:18:48 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: NLS stage locale is US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939885 Time   : Mon Jun 19 20:18:48 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact: Using NLS map ISO8859-1
+Event Id: 939886 Time   : Mon Jun 19 20:20:10 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Using NLS map ISO8859-1
+Event Id: 939887 Time   : Mon Jun 19 20:20:10 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Transaction committed as part of link close processing.
+Event Id: 939888 Time   : Mon Jun 19 20:20:10 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: Stage statistics
+        9 rows read from to_trans       7 rows read from from_esf_sns
+        9 rows written to to_insert     0.020 CPU seconds used, 0.327 seconds elapsed.
+Event Id: 939889 Time   : Mon Jun 19 20:20:10 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage finishing.
+Event Id: 939890 Time   : Mon Jun 19 20:20:10 2017
+Type    : STARTED User  : dsadm
+Message :       Finished Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+Event Id: 939891 Time   : Mon Jun 19 20:20:10 2017
+Type    : BATCH User    : dsadm
+Message :       (Batch::Load_Entmt_Sum_Fact_Flat_Incr) <- Insrt_Updted_Entmt_Sum_Fact_Flat: Job under control finished.
+Event Id: 939892 Time   : Mon Jun 19 20:34:21 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+        $DSS_DB_NAME = DSSPAGE  $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_PASSWD = ********       LAST_ESF_TS = 2017-06-19 20:16:27.996775
+        CUR_ESF_TS = 2017-06-19 20:31:52.041503         DSJobController = Batch::Load_Entmt_Sum_Fact_Flat_Incr
+Event Id: 939893 Time   : Mon Jun 19 20:34:21 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/usr/bin/nohup        A__z=! LOGNAME
+        APP_NAME=DSS    APT_COMPILEOPT=-O -q64 -c
+        APT_COMPILER=/usr/vacpp/bin/xlC_r       APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt
+        APT_LINKER=/usr/vacpp/bin/xlC_r         APT_LINKOPT=-G -q64
+        APT_MONITOR_MINTIME=10  APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1
+        APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine         APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020
+        APT_STRING_PADCHAR=0x20         ASBHOME=/opt/IBM/InformationServer/ASBNode
+        AUTHSTATE=files         BELL=^G
+        BLU_DB_NAME=DSSPANDA    BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5
+        BLU_DB_USERNAME=dss_oper        CLCMD_PASSTHRU=1
+        CLUSTER_OVERRIDE=yes    COGNOS_ACCOUNT_NAME=ygarsana
+        COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com    DB2_PRT_DIR=db2page/dwdm/RMS/
+        DB2DIR=/db2_src/db2inst1/sqllib/bin     DB2INSTANCE=db2inst1
+        DODS_NAME=$PROJDEF (Replace with required value)        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K
+        DODS_USERNAME=$PROJDEF (Replace with required value)    DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success
+        DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone       DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone
+        DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone         DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone
+        DS_ENABLE_RESERVED_CHAR_CONVERT=0       DS_HOSTNAME_ALIAS=b01aciappha020
+        DS_NO_PROCESS_METADATA=1        DS_OPERATOR_BUILDOP_DIR=buildop
+        DS_OPERATOR_WRAPPED_DIR=wrapped         DS_OPTIMIZE_FILE_BROWSE=0
+        DS_TDM_PIPE_OPEN_TIMEOUT=720    DS_TDM_TRACE_SUBROUTINE_CALLS=0
+        DS_USERNO=-2014         DSHOME=/opt/IBM/InformationServer/Server/DSEngine
+        DSIPC_OPEN_TIMEOUT=30   DSRPCD_PORT_NUMBER=31538
+        DSS_DB_NAME=DSSPAGE     DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        DSS_DB_USERNAME=dss_oper        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/
+        DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output   DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/
+        DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/       DSWaitResetStartup=90
+        DSWaitStartup=90        EDITOR=vi
+        FLAVOR=-1       FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        HISTFILE=/var/log/.hist.thdowdle.as.root        HISTSIZE=500
+        HOME=/  HRCL_NAME=dss_oper
+        INSTHOME=/db2_src/db2inst1      ISFSHMID=657457444
+        ISUSER=ruth     LANG=en_US
+        LC__FASTMSG=true        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64
+        LDR_CNTRL=USERREGS      LIBPATH=/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64::/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64
+        LOCPATH=/usr/lib/nls/loc        LOGIN=dsadm
+        LOGNAME=dsadm   MAIL=/usr/spool/mail/root
+        MAILMSG=[YOU HAVE NEW MAIL]     MANPATH=/usr/man
+        MIGRATE_CONTINUE_ON_ERROR=1     NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat
+        NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine     ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini
+        ODMDIR=/etc/objrepos    ODS_DB_NAME=ODSP
+        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  ODS_DB_USERNAME=dss_oper
+        PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin      PIDTOK=2884042
+        PS1=[b01aciapp071:$PWD]         PWD=/opt/IBM/InformationServer/Server/DSEngine
+        PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents         REAL_USER=thdowdle
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/usr/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=root
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 939894 Time   : Mon Jun 19 20:34:22 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat: Set NLS locale to US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939895 Time   : Mon Jun 19 20:34:22 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage starting, tracemode = 0.
+Event Id: 939896 Time   : Mon Jun 19 20:34:22 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: NLS stage locale is US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939897 Time   : Mon Jun 19 20:34:22 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact: Using NLS map ISO8859-1
+Event Id: 939898 Time   : Mon Jun 19 20:35:50 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Using NLS map ISO8859-1
+Event Id: 939899 Time   : Mon Jun 19 20:35:50 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Transaction committed as part of link close processing.
+Event Id: 939900 Time   : Mon Jun 19 20:35:50 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: Stage statistics
+        3 rows read from to_trans       0 rows read from from_esf_sns
+        3 rows written to to_insert     0.020 CPU seconds used, 0.303 seconds elapsed.
+Event Id: 939901 Time   : Mon Jun 19 20:35:50 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage finishing.
+Event Id: 939902 Time   : Mon Jun 19 20:35:50 2017
+Type    : STARTED User  : dsadm
+Message :       Finished Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+Event Id: 939903 Time   : Mon Jun 19 20:35:50 2017
+Type    : BATCH User    : dsadm
+Message :       (Batch::Load_Entmt_Sum_Fact_Flat_Incr) <- Insrt_Updted_Entmt_Sum_Fact_Flat: Job under control finished.
+Event Id: 939904 Time   : Mon Jun 19 20:47:44 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+        $DSS_DB_NAME = DSSPAGE  $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_PASSWD = ********       LAST_ESF_TS = 2017-06-19 20:31:52.041503
+        CUR_ESF_TS = 2017-06-19 20:31:52.041503         DSJobController = Batch::Load_Entmt_Sum_Fact_Flat_Incr
+Event Id: 939905 Time   : Mon Jun 19 20:47:44 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/usr/bin/nohup        A__z=! LOGNAME
+        APP_NAME=DSS    APT_COMPILEOPT=-O -q64 -c
+        APT_COMPILER=/usr/vacpp/bin/xlC_r       APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt
+        APT_LINKER=/usr/vacpp/bin/xlC_r         APT_LINKOPT=-G -q64
+        APT_MONITOR_MINTIME=10  APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1
+        APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine         APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020
+        APT_STRING_PADCHAR=0x20         ASBHOME=/opt/IBM/InformationServer/ASBNode
+        AUTHSTATE=files         BELL=^G
+        BLU_DB_NAME=DSSPANDA    BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5
+        BLU_DB_USERNAME=dss_oper        CLCMD_PASSTHRU=1
+        CLUSTER_OVERRIDE=yes    COGNOS_ACCOUNT_NAME=ygarsana
+        COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com    DB2_PRT_DIR=db2page/dwdm/RMS/
+        DB2DIR=/db2_src/db2inst1/sqllib/bin     DB2INSTANCE=db2inst1
+        DODS_NAME=$PROJDEF (Replace with required value)        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K
+        DODS_USERNAME=$PROJDEF (Replace with required value)    DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success
+        DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone       DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone
+        DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone         DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone
+        DS_ENABLE_RESERVED_CHAR_CONVERT=0       DS_HOSTNAME_ALIAS=b01aciappha020
+        DS_NO_PROCESS_METADATA=1        DS_OPERATOR_BUILDOP_DIR=buildop
+        DS_OPERATOR_WRAPPED_DIR=wrapped         DS_OPTIMIZE_FILE_BROWSE=0
+        DS_TDM_PIPE_OPEN_TIMEOUT=720    DS_TDM_TRACE_SUBROUTINE_CALLS=0
+        DS_USERNO=-2234         DSHOME=/opt/IBM/InformationServer/Server/DSEngine
+        DSIPC_OPEN_TIMEOUT=30   DSRPCD_PORT_NUMBER=31538
+        DSS_DB_NAME=DSSPAGE     DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        DSS_DB_USERNAME=dss_oper        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/
+        DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output   DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/
+        DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/       DSWaitResetStartup=90
+        DSWaitStartup=90        EDITOR=vi
+        FLAVOR=-1       FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        HISTFILE=/var/log/.hist.thdowdle.as.root        HISTSIZE=500
+        HOME=/  HRCL_NAME=dss_oper
+        INSTHOME=/db2_src/db2inst1      ISFSHMID=657457444
+        ISUSER=ruth     LANG=en_US
+        LC__FASTMSG=true        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64
+        LDR_CNTRL=USERREGS      LIBPATH=/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64::/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64
+        LOCPATH=/usr/lib/nls/loc        LOGIN=dsadm
+        LOGNAME=dsadm   MAIL=/usr/spool/mail/root
+        MAILMSG=[YOU HAVE NEW MAIL]     MANPATH=/usr/man
+        MIGRATE_CONTINUE_ON_ERROR=1     NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat
+        NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine     ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini
+        ODMDIR=/etc/objrepos    ODS_DB_NAME=ODSP
+        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  ODS_DB_USERNAME=dss_oper
+        PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin      PIDTOK=2884042
+        PS1=[b01aciapp071:$PWD]         PWD=/opt/IBM/InformationServer/Server/DSEngine
+        PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents         REAL_USER=thdowdle
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/usr/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=root
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 939906 Time   : Mon Jun 19 20:47:45 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat: Set NLS locale to US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939907 Time   : Mon Jun 19 20:47:45 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage starting, tracemode = 0.
+Event Id: 939908 Time   : Mon Jun 19 20:47:45 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: NLS stage locale is US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939909 Time   : Mon Jun 19 20:47:45 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact: Using NLS map ISO8859-1
+Event Id: 939910 Time   : Mon Jun 19 20:47:46 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Using NLS map ISO8859-1
+Event Id: 939911 Time   : Mon Jun 19 20:47:46 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Transaction committed as part of link close processing.
+Event Id: 939912 Time   : Mon Jun 19 20:47:46 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: Stage statistics
+        0 rows read from to_trans       0 rows read from from_esf_sns
+        0 rows written to to_insert     0.020 CPU seconds used, 0.061 seconds elapsed.
+Event Id: 939913 Time   : Mon Jun 19 20:47:46 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage finishing.
+Event Id: 939914 Time   : Mon Jun 19 20:47:46 2017
+Type    : STARTED User  : dsadm
+Message :       Finished Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+Event Id: 939915 Time   : Mon Jun 19 20:47:46 2017
+Type    : BATCH User    : dsadm
+Message :       (Batch::Load_Entmt_Sum_Fact_Flat_Incr) <- Insrt_Updted_Entmt_Sum_Fact_Flat: Job under control finished.
+Event Id: 939916 Time   : Mon Jun 19 21:06:46 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+        $DSS_DB_NAME = DSSPAGE  $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_PASSWD = ********       LAST_ESF_TS = 2017-06-19 20:31:52.041503
+        CUR_ESF_TS = 2017-06-19 21:03:06.290879         DSJobController = Batch::Load_Entmt_Sum_Fact_Flat_Incr
+Event Id: 939917 Time   : Mon Jun 19 21:06:46 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/usr/bin/nohup        A__z=! LOGNAME
+        APP_NAME=DSS    APT_COMPILEOPT=-O -q64 -c
+        APT_COMPILER=/usr/vacpp/bin/xlC_r       APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt
+        APT_LINKER=/usr/vacpp/bin/xlC_r         APT_LINKOPT=-G -q64
+        APT_MONITOR_MINTIME=10  APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1
+        APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine         APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020
+        APT_STRING_PADCHAR=0x20         ASBHOME=/opt/IBM/InformationServer/ASBNode
+        AUTHSTATE=files         BELL=^G
+        BLU_DB_NAME=DSSPANDA    BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5
+        BLU_DB_USERNAME=dss_oper        CLCMD_PASSTHRU=1
+        CLUSTER_OVERRIDE=yes    COGNOS_ACCOUNT_NAME=ygarsana
+        COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com    DB2_PRT_DIR=db2page/dwdm/RMS/
+        DB2DIR=/db2_src/db2inst1/sqllib/bin     DB2INSTANCE=db2inst1
+        DODS_NAME=$PROJDEF (Replace with required value)        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K
+        DODS_USERNAME=$PROJDEF (Replace with required value)    DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success
+        DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone       DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone
+        DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone         DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone
+        DS_ENABLE_RESERVED_CHAR_CONVERT=0       DS_HOSTNAME_ALIAS=b01aciappha020
+        DS_NO_PROCESS_METADATA=1        DS_OPERATOR_BUILDOP_DIR=buildop
+        DS_OPERATOR_WRAPPED_DIR=wrapped         DS_OPTIMIZE_FILE_BROWSE=0
+        DS_TDM_PIPE_OPEN_TIMEOUT=720    DS_TDM_TRACE_SUBROUTINE_CALLS=0
+        DS_USERNO=-3584         DSHOME=/opt/IBM/InformationServer/Server/DSEngine
+        DSIPC_OPEN_TIMEOUT=30   DSRPCD_PORT_NUMBER=31538
+        DSS_DB_NAME=DSSPAGE     DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5
+        DSS_DB_USERNAME=dss_oper        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/
+        DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/
+        DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output   DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/
+        DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/       DSWaitResetStartup=90
+        DSWaitStartup=90        EDITOR=vi
+        FLAVOR=-1       FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com
+        HISTFILE=/var/log/.hist.thdowdle.as.root        HISTSIZE=500
+        HOME=/  HRCL_NAME=dss_oper
+        INSTHOME=/db2_src/db2inst1      ISFSHMID=657457444
+        ISUSER=ruth     LANG=en_US
+        LC__FASTMSG=true        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64
+        LDR_CNTRL=USERREGS      LIBPATH=/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64::/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64
+        LOCPATH=/usr/lib/nls/loc        LOGIN=dsadm
+        LOGNAME=dsadm   MAIL=/usr/spool/mail/root
+        MAILMSG=[YOU HAVE NEW MAIL]     MANPATH=/usr/man
+        MIGRATE_CONTINUE_ON_ERROR=1     NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat
+        NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine     ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini
+        ODMDIR=/etc/objrepos    ODS_DB_NAME=ODSP
+        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  ODS_DB_USERNAME=dss_oper
+        PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin      PIDTOK=2884042
+        PS1=[b01aciapp071:$PWD]         PWD=/opt/IBM/InformationServer/Server/DSEngine
+        PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents         REAL_USER=thdowdle
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/usr/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=root
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 939918 Time   : Mon Jun 19 21:06:47 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat: Set NLS locale to US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939919 Time   : Mon Jun 19 21:06:47 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage starting, tracemode = 0.
+Event Id: 939920 Time   : Mon Jun 19 21:06:47 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: NLS stage locale is US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH,US-ENGLISH
+Event Id: 939921 Time   : Mon Jun 19 21:06:47 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact: Using NLS map ISO8859-1
+Event Id: 939922 Time   : Mon Jun 19 21:08:06 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Using NLS map ISO8859-1
+Event Id: 939923 Time   : Mon Jun 19 21:08:07 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..ENTL1_Entmt_Sum_Fact_Flat: Transaction committed as part of link close processing.
+Event Id: 939924 Time   : Mon Jun 19 21:08:07 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: Stage statistics
+        9 rows read from to_trans       2 rows read from from_esf_sns
+        9 rows written to to_insert     0.010 CPU seconds used, 0.535 seconds elapsed.
+Event Id: 939925 Time   : Mon Jun 19 21:08:07 2017
+Type    : INFO User     : dsadm
+Message :       Insrt_Updted_Entmt_Sum_Fact_Flat..Transformer: DSD.StageRun Active stage finishing.
+Event Id: 939926 Time   : Mon Jun 19 21:08:07 2017
+Type    : STARTED User  : dsadm
+Message :       Finished Job Insrt_Updted_Entmt_Sum_Fact_Flat.
+Event Id: 939927 Time   : Mon Jun 19 21:08:07 2017
+Type    : BATCH User    : dsadm
+Message :       (Batch::Load_Entmt_Sum_Fact_Flat_Incr) <- Insrt_Updted_Entmt_Sum_Fact_Flat: Job under control finished.

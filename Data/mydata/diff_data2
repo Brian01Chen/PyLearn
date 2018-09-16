@@ -1,0 +1,5 @@
+Hello
+Let's go to query:
+  select * from dwdm2.maintnc_expird_renewd_fact
+  where expird_period='201802'
+  with ur

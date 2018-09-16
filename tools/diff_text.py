@@ -2,13 +2,14 @@ import difflib
 import re
 import sys,os
 
+
 def comptxt(text1,text2):
     text1_lines = text1.splitlines()
     text2_lines = text2.splitlines()
 
     pattern = re.compile(" \t")
     hdiff = difflib.HtmlDiff()
-    diff = hdiff.make_file(text1_lines,text2_lines)
+    diff = hdiff.make_file(text1_lines, text2_lines)
     #open any web exploer,and enter 'c:\info.html' to view compare result
     with open (r'c:\info.html','w+') as htmlf:
         htmlf.write(diff)
@@ -20,6 +21,7 @@ def comptxt(text1,text2):
             #print (elt)
             indices = seqdiff.b2j.setdefault(elt, [])
             indices.append(i)
+
     
 def compfile(file1,file2):
     if os.path.exists(file1) and os.path.exists(file2):

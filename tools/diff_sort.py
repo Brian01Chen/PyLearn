@@ -2,7 +2,7 @@
 def diff_file(f1,f2,is_sort = False):
 
     if is_sort == False:
-        with open(f1,'r') as srcfile,open(f2,'r') as cmpfile:
+        with open(f1, 'r') as srcfile, open(f2, 'r') as cmpfile:
             cmpcontent = cmpfile.readlines()
             for sn,sline in enumerate(srcfile):
                 row , besti, bestj, bestsize = 0, 0, 0, 0
@@ -27,7 +27,7 @@ def diff_file(f1,f2,is_sort = False):
         pass
 
     
-def row_best_match(a,b,alo,ahi,blo,bhi):
+def row_best_match(a, b, alo, ahi, blo, bhi):
     besti, bestj, bestsize = alo, blo, 0
     
     b2j = {}
@@ -38,7 +38,7 @@ def row_best_match(a,b,alo,ahi,blo,bhi):
     nothing = []
     for i in range(alo, ahi):
             # look at all instances of a[i] in b; note that because
-            j2lenget = j2len.get                            # j2lenget 字典记录历史数据
+            j2lenget = j2len.get                            # j2lenget get function
             newj2len = {}                                   # newj2len 每次都初始化
             for j in b2j.get(a[i], nothing):
                 # a[i] matches b[j]
@@ -46,13 +46,16 @@ def row_best_match(a,b,alo,ahi,blo,bhi):
                     continue
                 if j >= bhi:
                     break
+                print("show:", i, j, a[i], b2j.get(a[i], nothing))
                 k = newj2len[j] = j2lenget(j-1, 0) + 1      # j2lenget(j-1) 记录了上次 k-1 
-                if k > bestsize :                           # k>= 可以就远匹配
+                if k > bestsize:                            # k>= 可以就远匹配
                     besti, bestj, bestsize = i-k+1, j-k+1, k
-            #print ('besti, bestj, bestsize: ' , besti, bestj, bestsize)    
+            print('besti, bestj, bestsize: ', besti, bestj, bestsize)
             j2len = newj2len
     
     return besti, bestj, bestsize
+
+
 
 def row_all_match_block(a,b):
     
@@ -96,17 +99,19 @@ def get_opcodes(matching_blocks):
             answer.append( ('equal', ai, i, bj, j) )
     return answer 
 
+
 if __name__ == '__main__':
-    f1 = r'C:\Users\IBM_ADMIN\Desktop\1old.txt'
-    f2 = r'C:\Users\IBM_ADMIN\Desktop\2ne.txt'
-    diff_file(f1,f2)
+    f1 = r'../Data/mydata/diff_data1'
+    f2 = r'../Data/mydata/diff_data1'
+    #diff_file(f1,f2)
     a1 = 'Heloo Friday Moring Good Day\n'
     b1 = 'Hello he Friday Moring Day'
+    row_best_match(a1, b1, 0, len(a1), 0, len(b1))
     a11 = a1.split()
     b11 = b1.split()
-    blocks = row_all_match_block(a11,b11)
+    #blocks = row_all_match_block(a11,b11)
     #print (blocks)
-    answer = get_opcodes(blocks)
+    #answer = get_opcodes(blocks)
     #print (answer)
 
     

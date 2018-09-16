@@ -1,0 +1,306 @@
+Event Id: 6167 Time     : Wed Jun 28 20:45:53 2017
+Type    : STARTED User  : dsadm
+Message :       Starting Job Rmt_Brand_Dimnsn.
+        $DSS_DB_PASSWD = ********       $DSS_DB_USERNAME = dss_oper
+        $DSS_DB_NAME = DSSPAGE  DSJobController = Batch::Rmt_Master_Load_Sequence
+Event Id: 6168 Time     : Wed Jun 28 20:45:54 2017
+Type    : INFO User     : dsadm
+Message :       Environment variable settings:
+        _=/opt/IBM/InformationServer/Server/DSEngine/bin/uvsh   APP_NAME=DSS
+        APT_COMPILEOPT=-O -q64 -c       APT_COMPILER=/usr/vacpp/bin/xlC_r
+        APT_CONFIG_FILE=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt      APT_ERROR_CONFIGURATION=severity, !vseverity, !jobid, moduleid, errorIndex, timestamp, !ipaddr, !nodeplayer, !nodename, opid, message
+        APT_LINKER=/usr/vacpp/bin/xlC_r         APT_LINKOPT=-G -q64
+        APT_MONITOR_MINTIME=10  APT_NO_ONE_NODE_COMBINING_OPTIMIZATION=1
+        APT_OPERATOR_REGISTRY_PATH=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/buildop     APT_ORCHHOME=/opt/IBM/InformationServer/Server/PXEngine
+        APT_PM_CONDUCTOR_HOSTNAME=b01aciappha020        APT_STRING_PADCHAR=0x20
+        ASBHOME=/opt/IBM/InformationServer/ASBNode      AUTHSTATE=compat
+        BELL=^G         BLU_DB_NAME=DSSPANDA
+        BLU_DB_PWD=LE:@1KVH<9:>4O6I=8J41KH5     BLU_DB_USERNAME=dss_oper
+        CLCMD_PASSTHRU=1        CLUSTER_OVERRIDE=yes
+        COGNOS_ACCOUNT_NAME=ygarsana    COGNOS_SERVER_NAME_SS=cogps1.rtp.dst.ibm.com
+        DB2_PRT_DIR=db2page/dwdm/RMS/   DB2_SP_ENTMT_DIR=db2page/dwdm/mntrnwl
+        DB2DIR=/db2_src/db2inst1/sqllib/bin     DB2INSTANCE=db2inst1
+        DODS_NAME=$PROJDEF (Replace with required value)        DODS_PASSWORD=HDI@IJV8O9JN064IL:JD1K95F4>ID0UL@UC=kF;dG3Q?0PO8HM1dG61FEE1MN4=iHGH<H<0AC5<>:CLI64O0i<8VKOm<3U<4LLK@1KVA=93L0GGM=K
+        DODS_USERNAME=$PROJDEF (Replace with required value)    DONE_SIGNAL_FILE_CUBE=/userin/BuildSSCube.success
+        DONE_SIGNAL_FILE_CUST=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Custdone       DONE_SIGNAL_FILE_PROD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/Proddone
+        DONE_SIGNAL_FILE_RMS=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/RMSdone         DONE_SIGNAL_FILE_UC=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/UCdone
+        DS_ENABLE_RESERVED_CHAR_CONVERT=0       DS_HOSTNAME_ALIAS=b01aciappha020
+        DS_NO_PROCESS_METADATA=1        DS_OPERATOR_BUILDOP_DIR=buildop
+        DS_OPERATOR_WRAPPED_DIR=wrapped         DS_OPTIMIZE_FILE_BROWSE=0
+        DS_TDM_PIPE_OPEN_TIMEOUT=720    DS_TDM_TRACE_SUBROUTINE_CALLS=0
+        DS_USERNO=-464  DSE_PID_SIGNATURE=1
+        DSHOME=/opt/IBM/InformationServer/Server/DSEngine       DSIPC_OPEN_TIMEOUT=30
+        DSRPCD_PORT_NUMBER=31538        DSS_DB_NAME=DSSPAGE
+        DSS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  DSS_DB_USERNAME=dss_oper
+        DSW_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  DSW_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        DSW_MAIL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/mail/      DSW_OUTPUT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/output
+        DSW_SCRIPT_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/scripts/         DSW_SQL_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/sqls/
+        DSWaitResetStartup=90   DSWaitStartup=90
+        EDITOR=vi       FLAVOR=-1
+        FROM_EMAIL=dsadm@b01aciapp071.ahe.pok.ibm.com   HISTSIZE=500
+        HOME=/home/dsadm        HRCL_NAME=dss_oper
+        INSTHOME=/db2_src/db2inst1      LANG=en_US
+        LC__FASTMSG=true        LD_LIBRARY_PATH=:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/lib:/usr/lib64:/lib64
+        LDR_CNTRL=USERREGS      LIBPATH=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/RT_BP291.O:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSParallel:/opt/IBM/InformationServer/Server/PXEngine/user_lib:/opt/IBM/InformationServer/Server/PXEngine/lib:/opt/IBM/InformationServer/Server/Projects/DataWarehouse/buildop:/opt/IBM/InformationServer/Server/branded_odbc/lib:/opt/IBM/InformationServer/Server/DSEngine/lib:/opt/IBM/InformationServer/Server/DSEngine/uvdlls:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64:/opt/IBM/InformationServer/ASBNode/apps/jre/lib/ppc64/j9vm:/opt/IBM/InformationServer/ASBNode/lib/cpp:/opt/IBM/InformationServer/ASBNode/apps/proxy/cpp/aix-all-ppc_64:/db2_src/db2inst1/sqllib/lib64:/usr/local/nz/lib64:/usr/local/nz/lib:/usr/local/lib:/usr/lib:/opt/IBM/db2/V9/lib64:/lib
+        LOCPATH=/usr/lib/nls/loc        LOGIN=dsadm
+        LOGNAME=dsadm   MANPATH=/usr/man
+        MIGRATE_CONTINUE_ON_ERROR=1     NLSPATH=/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat
+        NZ_ODBC_INI_PATH=/opt/IBM/InformationServer/Server/DSEngine     ODBCINI=/opt/IBM/InformationServer/Server/DSEngine/.odbc.ini
+        ODMDIR=/etc/objrepos    ODS_DB_NAME=ODSP
+        ODS_DB_PASSWD=LE:@1KVH<9:>4O6I=8J41KH5  ODS_DB_USERNAME=dss_oper
+        OSH_STDOUT_MSG=1        PATH=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/wrapped:/opt/IBM/InformationServer/Server/Projects/DataWarehouse/buildop:/opt/IBM/InformationServer/Server/Projects/DataWarehouse/RT_BP291.O:/opt/IBM/InformationServer/Server/DSComponents/lib:/opt/IBM/InformationServer/Server/DSComponents/bin:/opt/IBM/InformationServer/Server/DSParallel:/opt/IBM/InformationServer/Server/PXEngine/user_osh_wrappers:/opt/IBM/InformationServer/Server/PXEngine/osh_wrappers:/opt/IBM/InformationServer/Server/PXEngine/bin:/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin:/usr/es/sbin/cluster/utilities:/db2_src/db2inst1/sqllib/bin:/db2_src/db2inst1/sqllib/adm:/db2_src/db2inst1/sqllib/misc:/usr/local/nz/bin:/usr:/usr/vacpp:/usr/vacpp/bin
+        PWD=/opt/IBM/InformationServer/Server/Projects/DataWarehouse    PX_DBCONNECTHOME=/opt/IBM/InformationServer/Server/DSComponents
+        RPC_SUPPORTED_PROTSEQS=ncadg_ip_udp     SHELL=/bin/ksh
+        SPR_IN_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/in/  SPR_LIB_DIR=/opt/IBM/InformationServer/Server/Projects/DataWarehouse/dw_cfg/lib/
+        SYS_CODE=P      TERM=dumb
+        THREADS_FLAG=native     TO_EMAIL=ss_support@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_ES_FAILURE=entmt_sys_support_failure@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL_ES_SUCCESS=entmt_sys_support_success@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_RMT_SUCCESS=mmcampo@us.ibm.com,rmtuser@us.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com    TO_EMAIL_SNS_CUSTOMER=cognos_trigger@cogdev1.austin.ibm.com,cognos_trigger@b01cxcp11048.gho.pok.ibm.com,SSD_Users_-_Subscription_&_Support_@wwpdl.vnet.ibm.com,SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com
+        TO_EMAIL_SNS_VALIDATORS=ss_validators@wwpdl.vnet.ibm.com, ss_support@wwpdl.vnet.ibm.com, SWG_IM_Errors_MailInDb@wwpdl.vnet.ibm.com      TO_EMAIL2=swgid_ss_dev_prod_support@wwpdl.vnet.ibm.com
+        TZ=America/New_York     UDTBIN=/opt/IBM/InformationServer/Server/DSEngine/ud41/bin
+        UDTHOME=/opt/IBM/InformationServer/Server/DSEngine/ud41         USER=dsadm
+        VISUAL=vi       WARNING_MESSAGE=S&S Warning Message
+        WHO=DataWarehouse       XFILESEARCHPATH=/usr/lib/X11/%T/%N%S:/usr/tools
+Event Id: 6169 Time     : Wed Jun 28 20:45:54 2017
+Type    : INFO User     : dsadm
+Message :       Parallel job initiated
+Event Id: 6170 Time     : Wed Jun 28 20:45:54 2017
+Type    : INFO User     : dsadm
+Message :       Parallel job default NLS map ISO-8859-1, default locale OFF
+Event Id: 6171 Time     : Wed Jun 28 20:45:54 2017
+Type    : INFO User     : dsadm
+Message :       main_program: IBM InfoSphere DataStage Enterprise Edition 8.7.0.6614
+        Copyright (c) 2001, 2005-2011 IBM Corporation. All rights reserved 
+Event Id: 6172
+Time    : Wed Jun 28 20:45:54 2017 Type : INFO
+User    : dsadm Message :
+        main_program: conductor uname: -s=AIX; -r=1; -v=7; -n=b01aciapp071; -m=00CC67714C00 
+Event Id: 6173
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        main_program: orchgeneral: loaded       orchsort: loaded
+        orchstats: loaded Event Id: 6174
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        main_program: Requesting delayed metadata.      Requesting delayed metadata.
+Event Id: 6175 Time     : Wed Jun 28 20:45:55 2017
+Type    : INFO User     : dsadm
+Message :       main_program: APT configuration file: /opt/IBM/InformationServer/Server/Projects/DataWarehouse/DataWarehouse.apt
+        {               node "node1"
+                {                       fastname "b01aciappha020"
+                        pools ""                        resource disk "/opt/IBM/InformationServer/Server/Projects/DataWarehouse/Datasets" {pools ""}
+                        resource scratchdisk "/opt/IBM/InformationServer/Server/Projects/DataWarehouse/Scratch" {pools ""}              }
+        } 
+Event Id: 6176
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: Using NLS map ISO-8859-1 Event Id: 6177
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: Using NLS map ISO-8859-1 Event Id: 6178
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: Executing BeforeSQL  Event Id: 6179
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: Executing BeforeSQL  Event Id: 6180
+Time    : Wed Jun 28 20:45:55 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_PROD_DIMNSN: Using NLS map ISO-8859-1 Event Id: 6181
+Time    : Wed Jun 28 20:47:53 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_PROD_DIMNSN: Using NLS map ISO-8859-1 Event Id: 6182
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6183 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6184
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = ANA      ALT_SW_PROD_BRAND_CODE_DSCR = IBM Analytics Platform                   ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6185
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = ANA      ALT_SW_PROD_BRAND_CODE_DSCR = IBM Analytics Platform                   ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6186
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6187 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6188
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = ANS      ALT_SW_PROD_BRAND_CODE_DSCR = Industry Platforms                       ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6189
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = ANS      ALT_SW_PROD_BRAND_CODE_DSCR = Industry Platforms                       ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6190
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6191 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6192
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = COM      ALT_SW_PROD_BRAND_CODE_DSCR = Watson Customer Engagement               ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6193
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = COM      ALT_SW_PROD_BRAND_CODE_DSCR = Watson Customer Engagement               ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6194
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6195 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. Event Id: 6196
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = CPS      ALT_SW_PROD_BRAND_CODE_DSCR = IBM Cloud                                ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6197
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = CPS      ALT_SW_PROD_BRAND_CODE_DSCR = IBM Cloud                                ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6198
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6199 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. Event Id: 6200
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = IBMS     ALT_SW_PROD_BRAND_CODE_DSCR = Transaction Processing Software          ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6201
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = IBMS     ALT_SW_PROD_BRAND_CODE_DSCR = Transaction Processing Software          ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6202
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6203 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6204
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = IOT      ALT_SW_PROD_BRAND_CODE_DSCR = Internet of Things                       ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6205
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = IOT      ALT_SW_PROD_BRAND_CODE_DSCR = Internet of Things                       ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6206
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6207 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. Event Id: 6208
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = OTHER    ALT_SW_PROD_BRAND_CODE_DSCR = Other                                    ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6209
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = OTHER    ALT_SW_PROD_BRAND_CODE_DSCR = Other                                    ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6210
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6211 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. Event Id: 6212
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = SOC      ALT_SW_PROD_BRAND_CODE_DSCR = Collaboration Solutions                  ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6213
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = SOC      ALT_SW_PROD_BRAND_CODE_DSCR = Collaboration Solutions                  ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6214
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6215 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6216
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = SS       ALT_SW_PROD_BRAND_CODE_DSCR = IBM Security                             ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6217
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = SS       ALT_SW_PROD_BRAND_CODE_DSCR = IBM Security                             ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6218
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6219 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6220
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = TMS      ALT_SW_PROD_BRAND_CODE_DSCR = Talent Management Solutions              ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6221
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = TMS      ALT_SW_PROD_BRAND_CODE_DSCR = Talent Management Solutions              ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6222
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6223 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6224
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = WG       ALT_SW_PROD_BRAND_CODE_DSCR = Watson Platform                          ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  
+Event Id: 6225
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = WG       ALT_SW_PROD_BRAND_CODE_DSCR = Watson Platform                          ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  
+Event Id: 6226
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505        '.
+Event Id: 6227 Time     : Wed Jun 28 20:47:53 2017
+Type    : WARNING User  : dsadm
+Message :       DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: SQLExecDirect: DB2 warning/info message '[IBM][CLI Driver][DB2/AIX64] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by "1" constrains table "RMT1.BRAND_DIMNSN" from having duplicate values for the index key.  SQLSTATE=23505
+        '. 
+Event Id: 6228
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = WH       ALT_SW_PROD_BRAND_CODE_DSCR = Watson Health                            ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  
+Event Id: 6229
+Time    : Wed Jun 28 20:47:53 2017 Type : WARNING
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Warning: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: ALT_SW_PROD_BRAND_CODE = WH       ALT_SW_PROD_BRAND_CODE_DSCR = Watson Health                            ADD_DATE = 2017-6-28 20:47:53.0 ADD_BY_USER_NAME = dss_oper MOD_DATE = 2017-6-28 20:47:53.0 MOD_BY_USER_NAME = dss_oper  Event Id: 6230
+Time    : Wed Jun 28 20:47:53 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_RMT_BRAND_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: Transaction committed as part of link close processing.  
+Event Id: 6231
+Time    : Wed Jun 28 20:47:53 2017 Type : INFO
+User    : dsadm Message :
+        DB2_UDB_PROD_DIMNSN,0: Info: Rmt_Brand_Dimnsn.DB2_UDB_RMT_BRAND_DIMNSN: Transaction committed as part of link close processing.  
+Event Id: 6232
+Time    : Wed Jun 28 20:47:53 2017 Type : INFO
+User    : dsadm Message :
+        main_program: Step execution finished with status = OK. 
+Event Id: 6233
+Time    : Wed Jun 28 20:47:53 2017 Type : INFO
+User    : dsadm Message :
+        main_program: Startup time, 0:00; production run time, 1:57. 
+Event Id: 6234
+Time    : Wed Jun 28 20:47:53 2017 Type : INFO
+User    : dsadm Message :
+        Parallel job reports successful completion 
+Event Id: 6235
+Time    : Wed Jun 28 20:47:53 2017 Type : STARTED
+User    : dsadm Message :
+        Finished Job Rmt_Brand_Dimnsn. 
+Event Id: 6236
+Time    : Wed Jun 28 20:47:53 2017 Type : BATCH
+User    : dsadm Message :
+        (Batch::Rmt_Master_Load_Sequence) <- Rmt_Brand_Dimnsn: Job under control finished. 

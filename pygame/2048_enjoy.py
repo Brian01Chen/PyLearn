@@ -1,6 +1,5 @@
 import random
 from sys import exit
-from copy import deepcopy
 import pygame
 from pygame.locals import *
 import os
@@ -112,6 +111,7 @@ def draw_box():
         x = left_of_screen + box_gap
         y += box_size + box_gap
 
+
 def refh_img():
     global score
     screen.blit(background, (0,0))
@@ -126,26 +126,25 @@ def refh_img():
     
     x = left_of_screen+10
     y = left_of_screen//2 + 15
-    retry = Rect((x,y),(60,30),'Reset',BLACK,(255,255,15),16)
+    retry = Rect((x,y),(60,30), 'Reset', BLACK, (255,255,15), 16)
     retry.render(screen)
 
     #分数
-    screen.blit(write_text(u"Score",color=CHOCOLATE, height=16), (left_of_screen+105, left_of_screen//2 + 5))
+    screen.blit(write_text(u"Score", color=CHOCOLATE, height=16), (left_of_screen+105, left_of_screen//2 + 5))
     x = left_of_screen+100
     y = left_of_screen//2 + 30
-    scores = Rect((x,y),(60,20),str(score),BLACK,(255,202,172),14)
+    scores = Rect((x,y),(60,20), str(score), BLACK, (255,202,172), 14)
     scores.render(screen)
 
     #最高分
-    screen.blit(write_text(u"Best",color=CHOCOLATE, height=16), (left_of_screen+175, left_of_screen//2 + 5))
+    screen.blit(write_text(u"Best", color=CHOCOLATE, height=16), (left_of_screen+175, left_of_screen//2 + 5))
     
     x = left_of_screen+165
     y = left_of_screen//2 + 30
-    bscore = Rect((x,y),(60,20),str(best),BLACK,(255,202,172),14)
+    bscore = Rect((x,y), (60,20), str(best), BLACK, (255,202,172), 14)
     bscore.render(screen)
     #画4*4矩阵
     draw_box()
-        
 
 
 def move(mtr, dirct):
@@ -208,7 +207,8 @@ def move(mtr, dirct):
           break
   
   return score
-  
+
+
 def update(mtr):
   ran_pos=[]
   ran_num=[2,4]
@@ -222,15 +222,18 @@ def update(mtr):
     n=random.choice(ran_num)
     mtr[k//4][k%4]=n
 
+
 def get_best():
     global score
     global best
-    if score > best :
+    if score > best:
         best = score
-        with open (os.path.join(os.getcwd(),'best.txt'), 'w+') as f:
+        with open (os.path.join(os.getcwd(), 'best.txt'), 'w+') as f:
             f.write(str(best))
         f.close()
     return best
+
+
 def go_on(mtr):
     if 2048 in mtr:
         print ('Greate! You Win! Your score is ',score)
@@ -265,20 +268,20 @@ if __name__ == '__main__':
                 old_score = score
                 if event.type == KEYUP and event.key == K_UP:
                     
-                    score = move(mtr,2)
+                    score = move(mtr, 2)
                     ##(已删)如果key为上、左、右，没有合并值，则不会新加入元素。
                     if update_flag == True :
                         update(mtr)
                 elif event.type == KEYUP and event.key == K_DOWN:
-                    score = move(mtr,1)
+                    score = move(mtr, 1)
                     if update_flag == True :
                         update(mtr)                   
                 elif event.type == KEYUP and event.key == K_LEFT:
-                    score = move(mtr,0)
+                    score = move(mtr, 0)
                     if update_flag == True :
                         update(mtr)
                 elif event.type == KEYUP and event.key == K_RIGHT:
-                    score = move(mtr,3)
+                    score = move(mtr, 3)
                     if update_flag == True :
                         update(mtr)
                 

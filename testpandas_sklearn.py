@@ -11,4 +11,4 @@ mapper = DataFrameMapper([('pet', LabelBinarizer()),
                           (['age'], StandardScaler())])
 td = mapper.fit_transform(testdata)
 
-print (td)
+print(td)

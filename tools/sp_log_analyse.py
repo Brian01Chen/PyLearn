@@ -1,20 +1,21 @@
 #code=utf-8
-import os,re,sys
+import os
+import re
 from datetime import datetime
 from prettytable import PrettyTable
 from ftpupdown import FTPload
 from find_word import find_file_list
 
 
-def time_between(start,end):
-    if type(start) == str :
+def time_between(start, end):
+    if type(start) == str:
 
-        start = datetime.strptime(start,'%Y-%m-%d-%H.%M.%S')
-        end = datetime.strptime(end,'%Y-%m-%d-%H.%M.%S')
+        start = datetime.strptime(start, '%Y-%m-%d-%H.%M.%S')
+        end = datetime.strptime(end, '%Y-%m-%d-%H.%M.%S')
     dsec = (end-start).seconds
-    minute,second = divmod(int(dsec),60)
-    if minute>60:
-        hour,minu = divmod(int(minute),60)
+    minute, second = divmod(int(dsec), 60)
+    if minute > 60:
+        hour, minu = divmod(int(minute), 60)
         minute = str(hour) + 'h' + str(minu) 
     duration = str(minute) + 'm' + str(second) + 's'
     return duration

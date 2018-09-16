@@ -1,14 +1,15 @@
 import difflib
 
 
-
-
-
 d = difflib.Differ()
+
+
 def _dump(tag, x, lo, hi):
         """Generate comparison results for a same-tagged range."""
         for i in range(lo, hi):
             yield '%s %s' % (tag, x[i])
+
+
 def _fancy_helper(a, alo, ahi, b, blo, bhi):
         g = []
         if alo < ahi:
@@ -20,6 +21,8 @@ def _fancy_helper(a, alo, ahi, b, blo, bhi):
             g = _dump('+', b, blo, bhi)
 
         yield from g
+
+
 def fancy_replace(a, alo, ahi, b, blo, bhi):
         best_ratio, cutoff = 0.74, 0.75
         cruncher = difflib.SequenceMatcher(None)
@@ -101,6 +104,7 @@ def fancy_replace(a, alo, ahi, b, blo, bhi):
         # pump out diffs from after the synch point
         yield from _fancy_helper(a, best_i+1, ahi, b, best_j+1, bhi)
 
+
 def _count_leading(line, ch):
     """
     Return number of `ch` characters at the start of `line`.
@@ -115,6 +119,7 @@ def _count_leading(line, ch):
     while i < n and line[i] == ch:
         i += 1
     return i
+
 
 def _qformat(aline, bline, atags, btags):
         r"""
@@ -149,7 +154,8 @@ def _qformat(aline, bline, atags, btags):
         yield "+ " + bline
         if btags:
             yield "? %s%s\n" % ("\t" * common, btags)
-            
+
+
 def plain_replace(a, alo, ahi, b, blo, bhi):
         assert alo < ahi and blo < bhi
         # dump the shorter block first -- reduces the burden on short-term
@@ -162,7 +168,6 @@ def plain_replace(a, alo, ahi, b, blo, bhi):
             second = _dump('+', b, blo, bhi)
         for g in first, second:
             yield from g
-
 
 
 if __name__ == '__main__':
